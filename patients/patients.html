@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Management | MediCare</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Patient CSS -->
+    <link rel="stylesheet" href="patients.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="nav-container">
+
+            <div class="logo">
+                <a href="../homepage/index.html">
+                    <span class="logo-icon">✚</span>
+                    MediCare
+                </a>
+            </div>
+
+            <nav class="navbar">
+                <a href="../homepage/index.html">Home</a>
+                <a href="patients.html" class="active">Patients</a>
+                <a href="../doctors/doctors.html">Doctors</a>
+                <a href="../departments/departments.html">Departments</a>
+                <a href="../appointments/appointments.html">Appointments</a>
+                <a href="../services/services.html">Services</a>
+                <a href="../pharmacy/pharmacy.html">Pharmacy</a>
+                <a href="../billing/billing.html">Billing</a>
+                <a href="../contact/contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- Page Introduction -->
+        <section class="page-intro">
+            <div class="container">
+                <p class="section-label">PATIENT MANAGEMENT</p>
+                <h1>Patient Care Made Simple</h1>
+                <p>
+                    Register patients, maintain patient records, and manage
+                    appointments through one organized interface.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ================= PATIENT REGISTRATION ================= -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">REGISTRATION</p>
+                    <h2>Patient Registration</h2>
+                    <p>
+                        Enter the patient's details to create a new patient record.
+                    </p>
+                </div>
+
+                <div class="form-card">
+
+                    <form action="#" method="post">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="patient-id">Patient ID</label>
+                                <input
+                                    type="text"
+                                    id="patient-id"
+                                    name="patient-id"
+                                    placeholder="Enter patient ID"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="full-name">Full Name</label>
+                                <input
+                                    type="text"
+                                    id="full-name"
+                                    name="full-name"
+                                    placeholder="Enter full name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dob">Date of Birth</label>
+                                <input
+                                    type="date"
+                                    id="dob"
+                                    name="dob"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender">
+                                    <option value="">Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Enter phone number"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter email address"
+                                >
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="address">Address</label>
+                                <textarea
+                                    id="address"
+                                    name="address"
+                                    rows="3"
+                                    placeholder="Enter patient's address"
+                                ></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="blood-group">Blood Group</label>
+                                <select id="blood-group" name="blood-group">
+                                    <option value="">Select blood group</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="emergency-contact">Emergency Contact</label>
+                                <input
+                                    type="tel"
+                                    id="emergency-contact"
+                                    name="emergency-contact"
+                                    placeholder="Emergency contact number"
+                                >
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn">
+                            Register Patient
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= PATIENT RECORDS ================= -->
+        <section class="section records-section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">RECORDS</p>
+                    <h2>Patient Records</h2>
+                    <p>
+                        View basic patient information and medical record details.
+                    </p>
+                </div>
+
+                <div class="table-card">
+                    <div class="table-wrapper">
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Patient ID</th>
+                                    <th>Patient Name</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Blood Group</th>
+                                    <th>Contact</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>P001</td>
+                                    <td>Rahul Sharma</td>
+                                    <td>32</td>
+                                    <td>Male</td>
+                                    <td>A+</td>
+                                    <td>9876543210</td>
+                                    <td><span class="status active-status">Active</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>P002</td>
+                                    <td>Priya Singh</td>
+                                    <td>28</td>
+                                    <td>Female</td>
+                                    <td>O+</td>
+                                    <td>9876501234</td>
+                                    <td><span class="status active-status">Active</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>P003</td>
+                                    <td>Aman Verma</td>
+                                    <td>45</td>
+                                    <td>Male</td>
+                                    <td>B+</td>
+                                    <td>9812345678</td>
+                                    <td><span class="status completed-status">Discharged</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>P004</td>
+                                    <td>Neha Gupta</td>
+                                    <td>36</td>
+                                    <td>Female</td>
+                                    <td>AB+</td>
+                                    <td>9898989898</td>
+                                    <td><span class="status active-status">Active</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= APPOINTMENT MANAGEMENT ================= -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">APPOINTMENTS</p>
+                    <h2>Appointment Management</h2>
+                    <p>
+                        Schedule appointments by entering patient and doctor details.
+                    </p>
+                </div>
+
+                <div class="form-card">
+
+                    <form action="#" method="post">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="appointment-patient">
+                                    Patient Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="appointment-patient"
+                                    name="appointment-patient"
+                                    placeholder="Enter patient name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="doctor">
+                                    Doctor Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="doctor"
+                                    name="doctor"
+                                    placeholder="Enter doctor name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="appointment-date">
+                                    Appointment Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="appointment-date"
+                                    name="appointment-date"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="appointment-time">
+                                    Appointment Time
+                                </label>
+
+                                <input
+                                    type="time"
+                                    id="appointment-time"
+                                    name="appointment-time"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="reason">
+                                    Reason for Visit
+                                </label>
+
+                                <textarea
+                                    id="reason"
+                                    name="reason"
+                                    rows="3"
+                                    placeholder="Enter reason for appointment"
+                                ></textarea>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn">
+                            Schedule Appointment
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+                <h3>MediCare</h3>
+                <p>
+                    A simple and organized healthcare management interface
+                    designed for better patient care.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="../homepage/index.html">Home</a>
+                <a href="patients.html">Patients</a>
+                <a href="../appointments/appointments.html">Appointments</a>
+                <a href="../contact/contact.html">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 MediCare Hospital. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
