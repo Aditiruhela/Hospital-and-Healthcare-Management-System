@@ -108,6 +108,18 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="age">Age</label>
+                                <input
+                                type="number"
+                                id="age"
+                                name="age"
+                                placeholder="Enter age"
+                                min="0"
+                                max="120"
+                                >
+                            </div>
+
+                            <div class="form-group">
                                 <label for="gender">Gender</label>
                                 <select id="gender" name="gender">
                                     <option value="">Select gender</option>
@@ -124,6 +136,13 @@
                                     id="phone"
                                     name="phone"
                                     placeholder="Enter phone number"
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Enter phone number"
+                                    pattern="[0-9]{10}"
+                                    maxlength="10"
+                                    
                                 >
                             </div>
 
@@ -169,6 +188,23 @@
                                     id="emergency-contact"
                                     name="emergency-contact"
                                     placeholder="Emergency contact number"
+                                    type="tel"
+                                    id="emergency"
+                                    name="emergency"
+                                    placeholder="Enter emergency contact"
+                                    pattern="[0-9]{10}"
+                                    maxlength="10"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn">
+                            Register Patient
+    maxlength="10"
+    required
+>
                                 >
                             </div>
 
