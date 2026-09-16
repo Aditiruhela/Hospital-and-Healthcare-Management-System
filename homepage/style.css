@@ -1,9 +1,4 @@
-/* =========================================================
-   MediCare Central — Homepage Styles
-   Organized top to bottom, same order as index.html sections
-   ========================================================= */
 
-/* ---------- Reset & base ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -11,13 +6,12 @@
 }
 
 :root {
-  /* Color palette — keep all colors here so every teammate's
-     page can reuse the same names for a consistent look */
-  --color-primary: #0D3B36;   /* deep teal — header, headings */
-  --color-secondary: #6B9080; /* sage green — accents, borders */
-  --color-accent: #E8A33D;    /* warm amber — buttons, highlights */
-  --color-bg: #FAFAF7;        /* soft off-white background */
-  --color-text: #1A2B27;      /* near-black ink for body text */
+
+  --color-primary: #0D3B36;   
+  --color-secondary: #6B9080; 
+  --color-accent: #E8A33D;    
+  --color-bg: #FAFAF7;       
+  --color-text: #1A2B27;      
   --color-text-light: #4A5D57;
 
   --font-heading: 'Lora', serif;
