@@ -1,0 +1,309 @@
+/* ===============================
+   MEDICARE CENTRAL
+   MEMBER 4 - SERVICES PAGE
+   =============================== */
+
+
+/* ---------- General ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f8f7f2;
+    color: #123c38;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* ---------- Navbar ---------- */
+
+.main-navbar {
+    background-color: #0b4f47;
+    padding: 18px 0;
+}
+
+.hospital-logo {
+    color: #ffffff !important;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.hospital-logo span {
+    color: #f2a93b;
+}
+
+.main-navbar .nav-link {
+    color: #ffffff !important;
+    font-size: 15px;
+    margin-left: 18px;
+    padding: 8px 0 !important;
+    border-bottom: 2px solid transparent;
+}
+
+.main-navbar .nav-link:hover,
+.main-navbar .nav-link.active {
+    border-bottom: 2px solid #f2a93b;
+}
+
+
+/* ---------- Hero ---------- */
+
+.services-hero {
+    background-color: #0b4f47;
+    color: white;
+    padding: 100px 20px 110px;
+}
+
+.eyebrow {
+    color: #f2a93b;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.services-hero h1 {
+    font-size: 58px;
+    line-height: 1.12;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 720px;
+    margin: auto;
+    color: #e5efec;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* ---------- Services Section ---------- */
+
+.services-section {
+    background-color: #f8f7f2;
+    padding: 90px 0;
+}
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    color: #0b4f47;
+    font-size: 43px;
+    margin-bottom: 15px;
+}
+
+.section-heading p:last-child {
+    max-width: 650px;
+    margin: auto;
+    color: #58716d;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* ---------- Service Cards ---------- */
+
+.service-card {
+    position: relative;
+    min-height: 320px;
+
+    background-color: #ffffff;
+
+    padding: 38px;
+
+    border: 1px solid #dce5e1;
+    border-left: 5px solid #6e9b8f;
+
+    border-radius: 7px;
+
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+
+    border-left-color: #f2a93b;
+
+    box-shadow: 0 15px 35px rgba(11, 79, 71, 0.12);
+}
+
+.service-number {
+    position: absolute;
+    top: 25px;
+    right: 28px;
+
+    color: #b8c9c4;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.service-icon {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #0b4f47;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #58716d;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.service-link {
+    color: #0b4f47;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.service-link:hover {
+    color: #d88d1d;
+}
+
+
+/* ---------- Emergency Banner ---------- */
+
+.emergency-banner {
+    background-color: #0b4f47;
+    color: white;
+    padding: 65px 0;
+}
+
+.emergency-banner h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.emergency-banner p:not(.eyebrow) {
+    color: #dce9e5;
+}
+
+
+/* ---------- Gold Button ---------- */
+
+.gold-button {
+    display: inline-block;
+
+    background-color: #f2a93b;
+    color: #123c38;
+
+    padding: 15px 28px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.gold-button:hover {
+    background-color: #ffffff;
+    color: #0b4f47;
+}
+
+
+/* ---------- Footer ---------- */
+
+.main-footer {
+    background-color: #083d37;
+    color: white;
+    padding: 45px 0;
+}
+
+.main-footer h3 {
+    font-size: 25px;
+}
+
+.main-footer h3 span {
+    color: #f2a93b;
+}
+
+.main-footer p {
+    color: #cbdad6;
+    margin-bottom: 6px;
+}
+
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1200px) {
+
+    .main-navbar .nav-link {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .main-navbar .nav-link {
+        margin-left: 8px;
+        font-size: 13px;
+    }
+
+    .services-hero h1 {
+        font-size: 48px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .main-navbar .nav-link {
+        margin-left: 5px;
+        font-size: 12px;
+    }
+
+    .services-hero {
+        padding: 75px 20px;
+    }
+
+    .services-hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .services-section {
+        padding: 65px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .service-card {
+        padding: 30px;
+    }
+
+    .emergency-banner {
+        text-align: center;
+    }
+
+    .gold-button {
+        margin-top: 25px;
+    }
+
+}
