@@ -497,3 +497,257 @@ h3 {
     }
 
 }
+/* =========================================
+   PHARMACY PAGE
+   ========================================= */
+
+.pharmacy-hero {
+    background-color: #0b554d;
+    color: #ffffff;
+    padding: 110px 20px 120px;
+}
+
+.pharmacy-hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1.12;
+    margin: 20px auto;
+}
+
+.pharmacy-hero .hero-description {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #f5f7f6;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* ---------- PHARMACY SECTION ---------- */
+
+.pharmacy-section {
+    background-color: #f8f8f5;
+    padding: 90px 20px;
+}
+
+.pharmacy-section .section-heading {
+    max-width: 720px;
+    margin: 0 auto 55px;
+}
+
+.pharmacy-section .section-heading h2 {
+    color: #0b554d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.pharmacy-section .section-heading > p:last-child {
+    color: #4c6863;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* ---------- MEDICINE CARD ---------- */
+
+.medicine-card {
+    height: 100%;
+    background-color: #ffffff;
+
+    padding: 32px;
+
+    border: 1px solid #dce5e1;
+    border-left: 5px solid #6e9b8f;
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.medicine-card:hover {
+    transform: translateY(-8px);
+
+    border-left-color: #f2a93b;
+
+    box-shadow: 0 18px 40px rgba(11, 79, 71, 0.15);
+}
+
+
+/* ---------- MEDICINE ICON ---------- */
+
+.medicine-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f8f1e3;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    margin-bottom: 22px;
+}
+
+
+/* ---------- CATEGORY ---------- */
+
+.medicine-category {
+    display: inline-block;
+
+    color: #d88d1d;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ---------- MEDICINE NAME ---------- */
+
+.medicine-card h3 {
+    color: #0b554d;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.medicine-card p {
+    color: #4c6863;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* ---------- MEDICINE INFO ---------- */
+
+.medicine-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #e4ebe8;
+    border-bottom: 1px solid #e4ebe8;
+
+    margin-bottom: 20px;
+}
+
+.medicine-info span {
+    color: #6c817c;
+    font-size: 14px;
+}
+
+.medicine-info strong {
+    color: #0b554d;
+    font-size: 20px;
+}
+
+
+/* ---------- BUTTON ---------- */
+
+.medicine-button {
+    width: 100%;
+
+    background-color: #0b554d;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 12px 20px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.medicine-button:hover {
+    background-color: #d88d1d;
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------- PHARMACY NOTE ---------- */
+
+.pharmacy-note {
+    background-color: #0b554d;
+    color: #ffffff;
+
+    padding: 75px 20px;
+}
+
+.pharmacy-note h2 {
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 42px;
+    font-weight: bold;
+
+    margin: 12px 0 15px;
+}
+
+.pharmacy-note p:not(.eyebrow) {
+    max-width: 700px;
+
+    color: #dce9e6;
+
+    line-height: 1.7;
+}
+
+
+/* ---------- GOLD BUTTON ---------- */
+
+.gold-button {
+    display: inline-block;
+
+    background-color: #f2a93b;
+    color: #0b554d;
+
+    text-decoration: none;
+
+    padding: 15px 28px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.gold-button:hover {
+    background-color: #ffffff;
+    color: #0b554d;
+
+    transform: translateY(-2px);
+}
