@@ -1,0 +1,499 @@
+/* =========================================
+   CONTACT & HELP PAGE
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f7f2;
+    color: #123c38;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.site-header {
+    background: #0b4f47;
+    padding: 0 6%;
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #f2a93b;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 10px;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #f2a93b;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.contact-hero {
+    background: #0b4f47;
+    color: #f8f7f2;
+    padding: 90px 8% 100px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow {
+    color: #f2a93b;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact-hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 60px;
+    line-height: 1.1;
+    margin: 15px 0 20px;
+}
+
+.contact-hero h1 span {
+    color: #f2a93b;
+}
+
+.contact-hero p:not(.eyebrow) {
+    max-width: 620px;
+    color: #d8e6e1;
+    font-size: 17px;
+}
+
+
+/* =========================================
+   GENERAL SECTION
+   ========================================= */
+
+.contact-section,
+.faq-section {
+    padding: 90px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #123c38;
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.section-heading > p:last-child {
+    color: #6e9b8f;
+}
+
+
+/* =========================================
+   CONTACT CARDS
+   ========================================= */
+
+.contact-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    background: #ffffff;
+    border: 1px solid #e0e8e4;
+    border-radius: 14px;
+    padding: 35px 28px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(18, 60, 56, 0.06);
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: #f2a93b;
+}
+
+.contact-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #0b4f47;
+    color: #f2a93b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.contact-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #123c38;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+    color: #6e9b8f;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.contact-link {
+    color: #0b4f47;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: #d88918;
+}
+
+
+/* =========================================
+   HELP SECTION
+   ========================================= */
+
+.help-section {
+    background: #eef4f1;
+    padding: 90px 8%;
+}
+
+.help-container {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.help-intro h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #123c38;
+    font-size: 42px;
+    margin: 10px 0 15px;
+}
+
+.help-intro > p:not(.eyebrow) {
+    color: #6e9b8f;
+    max-width: 450px;
+}
+
+
+/* =========================================
+   EMERGENCY BOX
+   ========================================= */
+
+.emergency-box {
+    background: #0b4f47;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.emergency-box strong {
+    color: #f2a93b;
+    font-size: 20px;
+}
+
+.emergency-box p {
+    color: #d8e6e1;
+    font-size: 14px;
+    margin: 10px 0 15px;
+}
+
+.emergency-number {
+    color: #f2a93b;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   FORM
+   ========================================= */
+
+.contact-form {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 14px;
+    border: 1px solid #dfe8e3;
+    box-shadow: 0 8px 25px rgba(18, 60, 56, 0.06);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #123c38;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #d5e1dc;
+    border-radius: 8px;
+    padding: 13px 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #123c38;
+    background: #fbfcfa;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0b4f47;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.gold-button {
+    background: #f2a93b;
+    color: #123c38;
+    border: none;
+    border-radius: 6px;
+    padding: 13px 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.gold-button:hover {
+    background: #d88918;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FAQ
+   ========================================= */
+
+.faq-section {
+    background: #f8f7f2;
+}
+
+.faq-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.faq-card {
+    background: #ffffff;
+    border: 1px solid #e0e8e4;
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.faq-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #123c38;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.faq-card p {
+    color: #6e9b8f;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.site-footer {
+    background: #0b4f47;
+    color: #d8e6e1;
+    padding: 50px 8% 20px;
+}
+
+.footer-content {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-content h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #ffffff;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.footer-bottom {
+    max-width: 1150px;
+    margin: 35px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px 0;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+    }
+
+    .help-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .contact-hero {
+        padding: 70px 20px 80px;
+    }
+
+    .contact-hero h1 {
+        font-size: 42px;
+    }
+
+    .contact-section,
+    .faq-section,
+    .help-section {
+        padding: 65px 20px;
+    }
+
+    .section-heading h2,
+    .help-intro h2 {
+        font-size: 34px;
+    }
+
+    .form-row,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 25px 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .site-header {
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 0;
+    }
+
+    .nav-links a {
+        padding: 7px 6px;
+        font-size: 12px;
+    }
+
+    .contact-hero h1 {
+        font-size: 35px;
+    }
+
+    .contact-hero p:not(.eyebrow) {
+        font-size: 15px;
+    }
+
+    .contact-card {
+        padding: 28px 20px;
+    }
+}
