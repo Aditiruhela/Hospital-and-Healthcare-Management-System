@@ -478,3 +478,23 @@ tbody tr:last-child td {
         padding: 20px;
     }
 }
+    /* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .patient-table {
+        min-width: 900px;
+    }
+    }
+/* Improve table readability */
+.patient-table th,
+.patient-table td {
+    white-space: nowrap;
+}
+
