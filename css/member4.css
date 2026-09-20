@@ -751,3 +751,124 @@ h3 {
 
     transform: translateY(-2px);
 }
+/* =========================================
+   PHARMACY RESPONSIVE DESIGN
+   ========================================= */
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 768px) {
+
+    .pharmacy-hero {
+        padding: 75px 20px 85px;
+    }
+
+    .pharmacy-hero h1 {
+        font-size: 44px;
+    }
+
+    .pharmacy-hero .hero-description {
+        font-size: 16px;
+    }
+
+    .pharmacy-section {
+        padding: 70px 20px;
+    }
+
+    .pharmacy-section .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .medicine-card {
+        padding: 28px;
+    }
+
+    .pharmacy-note {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .pharmacy-note h2 {
+        font-size: 34px;
+    }
+
+    .pharmacy-note .gold-button {
+        margin-top: 20px;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 576px) {
+
+    .pharmacy-hero {
+        padding: 65px 18px 70px;
+    }
+
+    .pharmacy-hero h1 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .pharmacy-hero .hero-description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .pharmacy-section {
+        padding: 60px 15px;
+    }
+
+    .pharmacy-section .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .pharmacy-section .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .pharmacy-section .section-heading > p:last-child {
+        font-size: 15px;
+    }
+
+    .medicine-card {
+        padding: 26px 22px;
+    }
+
+    .medicine-card h3 {
+        font-size: 24px;
+    }
+
+    .medicine-card p {
+        font-size: 14px;
+    }
+
+    .medicine-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 25px;
+    }
+
+    .medicine-info strong {
+        font-size: 18px;
+    }
+
+    .pharmacy-note {
+        padding: 55px 20px;
+    }
+
+    .pharmacy-note h2 {
+        font-size: 29px;
+    }
+
+    .pharmacy-note p:not(.eyebrow) {
+        font-size: 14px;
+    }
+
+    .gold-button {
+        padding: 13px 22px;
+        font-size: 14px;
+    }
+}
