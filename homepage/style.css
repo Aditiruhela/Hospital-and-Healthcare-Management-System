@@ -1,0 +1,271 @@
+/* Reset - sab elements ka default margin/padding hata rahe hain */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1A2B27;
+  background: #FAFAF7;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Lora', serif;
+  color: #0D3B36;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/*  Navbar  */
+.site-header {
+  background: #0D3B36;
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+.logo {
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.logo span {
+  color: #E8A33D;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #E7EFEC;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  border-bottom-color: #E8A33D;
+}
+
+/* Hamburger button - sirf mobile pe dikhega */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: #fff;
+}
+
+/* ---------- Hero section ---------- */
+.hero {
+  background: #0D3B36;
+  color: #fff;
+  padding: 90px 24px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #D6E3DE;
+  margin-bottom: 32px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #E8A33D;
+  color: #1A2B27;
+}
+
+.btn-outline {
+  border: 1.5px solid #D6E3DE;
+  color: #fff;
+}
+
+/* ---------- Stats strip ---------- */
+.stats {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 48px 24px;
+  gap: 24px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  color: #0D3B36;
+}
+
+.stat-label {
+  color: #4A5D57;
+  font-size: 0.9rem;
+}
+
+/* ---------- Departments (cards) ---------- */
+.departments {
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.section-intro {
+  color: #4A5D57;
+  margin-bottom: 40px;
+}
+
+/* Flexbox use kiya hai instead of grid - simpler hai */
+.dept-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  text-align: left;
+}
+
+.dept-card {
+  background: #fff;
+  border: 1px solid #E3E9E6;
+  border-left: 4px solid #6B9080;
+  border-radius: 6px;
+  padding: 24px;
+  flex: 1 1 280px; /* har card kam se kam 280px, baaki space equally baant lega */
+}
+
+.dept-card p {
+  color: #4A5D57;
+  font-size: 0.92rem;
+}
+
+/* ---------- Why choose us ---------- */
+.why-us {
+  background: #F0F4F2;
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.why-grid {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  text-align: left;
+}
+
+.why-item {
+  flex: 1 1 280px;
+}
+
+.why-item p {
+  color: #4A5D57;
+  font-size: 0.92rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: #0D3B36;
+  color: #D6E3DE;
+  padding: 28px 24px;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.88rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a:hover {
+  color: #E8A33D;
+}
+
+/* ---------- Mobile responsive ---------- */
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #0D3B36;
+    padding: 16px 24px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
