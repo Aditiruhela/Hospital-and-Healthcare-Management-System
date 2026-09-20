@@ -1084,3 +1084,135 @@ h3 {
     border: none;
     margin-top: 25px;
 }
+/* =========================================
+   BILLING RESPONSIVE DESIGN
+   ========================================= */
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 768px) {
+
+    .billing-hero {
+        padding: 75px 20px 85px;
+    }
+
+    .billing-hero h1 {
+        font-size: 44px;
+    }
+
+    .billing-hero .hero-description {
+        font-size: 16px;
+    }
+
+    .billing-section {
+        padding: 70px 20px;
+    }
+
+    .billing-section .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .billing-card {
+        padding: 28px;
+    }
+
+    .billing-card-header h3 {
+        font-size: 23px;
+    }
+
+    .billing-table {
+        min-width: 650px;
+    }
+
+    .billing-note,
+    .billing-summary {
+        height: auto;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 576px) {
+
+    .billing-hero {
+        padding: 65px 18px 70px;
+    }
+
+    .billing-hero h1 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .billing-hero .hero-description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .billing-section {
+        padding: 60px 15px;
+    }
+
+    .billing-section .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .billing-section .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .billing-section .section-heading > p:last-child {
+        font-size: 15px;
+    }
+
+    .billing-card {
+        padding: 24px 20px;
+        border-radius: 12px;
+    }
+
+    .billing-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .billing-card-header h3 {
+        font-size: 22px;
+    }
+
+    .billing-label {
+        font-size: 12px;
+    }
+
+    .billing-value {
+        font-size: 14px;
+    }
+
+    .billing-table {
+        min-width: 650px;
+    }
+
+    .billing-table thead th,
+    .billing-table tbody td {
+        padding: 13px 12px;
+        font-size: 13px;
+    }
+
+    .billing-note h3,
+    .billing-summary h3 {
+        font-size: 22px;
+    }
+
+    .summary-total {
+        font-size: 16px;
+    }
+
+    .summary-total strong {
+        font-size: 20px;
+    }
+
+    .billing-button {
+        padding: 13px 20px;
+    }
+}
