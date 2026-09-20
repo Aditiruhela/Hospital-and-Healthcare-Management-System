@@ -872,3 +872,215 @@ h3 {
         font-size: 14px;
     }
 }
+/* =========================================
+   BILLING PAGE
+   ========================================= */
+
+.billing-hero {
+    background: #0b4f47;
+    color: #f8f7f2;
+    padding: 90px 20px 100px;
+}
+
+.billing-hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 58px;
+    line-height: 1.1;
+    margin: 15px 0 20px;
+}
+
+.billing-hero h1 span {
+    color: #f2a93b;
+}
+
+.billing-hero .hero-description {
+    max-width: 600px;
+    color: #d8e6e1;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* ---------- BILLING SECTION ---------- */
+
+.billing-section {
+    background: #f8f7f2;
+    padding: 90px 20px;
+}
+
+.billing-section .section-heading {
+    margin-bottom: 45px;
+}
+
+.billing-section .section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #123c38;
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.billing-section .section-heading > p:last-child {
+    color: #6e9b8f;
+}
+
+
+/* ---------- BILLING CARD ---------- */
+
+.billing-card {
+    background: #ffffff;
+    border: 1px solid #e1e8e4;
+    border-radius: 14px;
+    padding: 32px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(18, 60, 56, 0.06);
+}
+
+.billing-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.billing-card-header h3,
+.billing-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #123c38;
+    margin: 0;
+}
+
+.billing-card-header h3 {
+    font-size: 26px;
+}
+
+
+/* ---------- STATUS ---------- */
+
+.bill-status {
+    background: #e5f3ec;
+    color: #0b4f47;
+    border: 1px solid #b9d9cb;
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* ---------- PATIENT DETAILS ---------- */
+
+.billing-label {
+    color: #6e9b8f;
+    font-size: 13px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.billing-value {
+    color: #123c38;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+
+/* ---------- BILLING TABLE ---------- */
+
+.billing-table {
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.billing-table thead th {
+    background: #0b4f47;
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.billing-table tbody td {
+    color: #123c38;
+    padding: 17px 16px;
+    border-color: #e5ebe8;
+    font-size: 14px;
+}
+
+.billing-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.billing-table tbody tr:hover {
+    background: #f7faf8;
+}
+
+
+/* ---------- BILLING NOTE ---------- */
+
+.billing-note {
+    height: calc(100% - 25px);
+}
+
+.billing-note h3 {
+    font-size: 25px;
+    margin: 12px 0 15px;
+}
+
+.billing-note p:not(.eyebrow) {
+    color: #6e9b8f;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+
+/* ---------- PAYMENT SUMMARY ---------- */
+
+.billing-summary {
+    height: calc(100% - 25px);
+}
+
+.billing-summary h3 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.summary-row,
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.summary-row {
+    color: #6e9b8f;
+    padding: 9px 0;
+}
+
+.summary-row strong {
+    color: #123c38;
+}
+
+.billing-summary hr {
+    border-color: #dce5e1;
+    margin: 18px 0;
+}
+
+.summary-total {
+    color: #123c38;
+    font-size: 18px;
+}
+
+.summary-total strong {
+    color: #0b4f47;
+    font-size: 23px;
+}
+
+.billing-button {
+    width: 100%;
+    border: none;
+    margin-top: 25px;
+}
