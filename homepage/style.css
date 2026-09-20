@@ -1,34 +1,20 @@
-
+/* Reset - sab elements ka default margin/padding hata rahe hain */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-
-  --color-primary: #0D3B36;   
-  --color-secondary: #6B9080; 
-  --color-accent: #E8A33D;    
-  --color-bg: #FAFAF7;       
-  --color-text: #1A2B27;      
-  --color-text-light: #4A5D57;
-
-  --font-heading: 'Lora', serif;
-  --font-body: 'Inter', sans-serif;
-}
-
 body {
-  font-family: var(--font-body);
-  color: var(--color-text);
-  background: var(--color-bg);
+  font-family: 'Inter', sans-serif;
+  color: #1A2B27;
+  background: #FAFAF7;
   line-height: 1.6;
 }
 
 h1, h2, h3 {
-  font-family: var(--font-heading);
-  color: var(--color-primary);
-  line-height: 1.25;
+  font-family: 'Lora', serif;
+  color: #0D3B36;
 }
 
 a {
@@ -40,36 +26,30 @@ ul {
   list-style: none;
 }
 
-/* Consistent max-width wrapper used by most sections */
-.dept-grid, .why-grid, .stats, .footer-content, .navbar {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* ---------- Header / Navbar ---------- */
+/*  Navbar  */
 .site-header {
-  background: var(--color-primary);
+  background: #0D3B36;
   position: sticky;
   top: 0;
-  z-index: 100;
 }
 
 .navbar {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 16px 24px;
 }
 
 .logo {
-  font-family: var(--font-heading);
+  font-family: 'Lora', serif;
   font-size: 1.3rem;
-  font-weight: 600;
   color: #fff;
 }
 
 .logo span {
-  color: var(--color-accent);
+  color: #E8A33D;
 }
 
 .nav-links {
@@ -79,26 +59,22 @@ ul {
 
 .nav-links a {
   color: #E7EFEC;
-  font-size: 0.95rem;
-  font-weight: 500;
-  padding: 6px 2px;
+  padding-bottom: 4px;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.2s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  border-bottom-color: var(--color-accent);
+  border-bottom-color: #E8A33D;
 }
 
-/* Hamburger — hidden on desktop, shown on mobile below */
+/* Hamburger button - sirf mobile pe dikhega */
 .nav-toggle {
   display: none;
   flex-direction: column;
   gap: 5px;
   background: none;
   border: none;
-  cursor: pointer;
 }
 
 .nav-toggle span {
@@ -107,9 +83,9 @@ ul {
   background: #fff;
 }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero section ---------- */
 .hero {
-  background: linear-gradient(180deg, #0D3B36 0%, #14504A 100%);
+  background: #0D3B36;
   color: #fff;
   padding: 90px 24px;
   text-align: center;
@@ -128,7 +104,6 @@ ul {
 
 .hero p {
   color: #D6E3DE;
-  font-size: 1.05rem;
   margin-bottom: 32px;
 }
 
@@ -143,17 +118,11 @@ ul {
   padding: 12px 26px;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 0.95rem;
   display: inline-block;
-  transition: transform 0.15s ease, opacity 0.15s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
 }
 
 .btn-primary {
-  background: var(--color-accent);
+  background: #E8A33D;
   color: #1A2B27;
 }
 
@@ -164,6 +133,8 @@ ul {
 
 /* ---------- Stats strip ---------- */
 .stats {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -177,37 +148,33 @@ ul {
 
 .stat-number {
   display: block;
-  font-family: var(--font-heading);
+  font-family: 'Lora', serif;
   font-size: 2rem;
-  font-weight: 700;
-  color: var(--color-primary);
+  color: #0D3B36;
 }
 
 .stat-label {
-  color: var(--color-text-light);
+  color: #4A5D57;
   font-size: 0.9rem;
 }
 
-/* ---------- Departments ---------- */
+/* ---------- Departments (cards) ---------- */
 .departments {
   padding: 64px 24px;
   text-align: center;
 }
 
-.departments h2,
-.why-us h2 {
-  font-size: 2rem;
-  margin-bottom: 8px;
-}
-
 .section-intro {
-  color: var(--color-text-light);
+  color: #4A5D57;
   margin-bottom: 40px;
 }
 
+/* Flexbox use kiya hai instead of grid - simpler hai */
 .dept-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   text-align: left;
 }
@@ -215,18 +182,14 @@ ul {
 .dept-card {
   background: #fff;
   border: 1px solid #E3E9E6;
-  border-left: 4px solid var(--color-secondary);
+  border-left: 4px solid #6B9080;
   border-radius: 6px;
   padding: 24px;
-}
-
-.dept-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: 8px;
+  flex: 1 1 280px; /* har card kam se kam 280px, baaki space equally baant lega */
 }
 
 .dept-card p {
-  color: var(--color-text-light);
+  color: #4A5D57;
   font-size: 0.92rem;
 }
 
@@ -238,34 +201,35 @@ ul {
 }
 
 .why-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  max-width: 1100px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-wrap: wrap;
   gap: 32px;
-  margin-top: 40px;
   text-align: left;
 }
 
-.why-item h3 {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
+.why-item {
+  flex: 1 1 280px;
 }
 
 .why-item p {
-  color: var(--color-text-light);
+  color: #4A5D57;
   font-size: 0.92rem;
 }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: var(--color-primary);
+  background: #0D3B36;
   color: #D6E3DE;
   padding: 28px 24px;
 }
 
 .footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
   gap: 16px;
   font-size: 0.88rem;
@@ -277,34 +241,24 @@ ul {
 }
 
 .footer-links a:hover {
-  color: var(--color-accent);
+  color: #E8A33D;
 }
 
-/* =========================================================
-   Responsive — tablets and phones
-   ========================================================= */
-@media (max-width: 800px) {
-  .dept-grid,
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+/* ---------- Mobile responsive ---------- */
 @media (max-width: 640px) {
   .nav-toggle {
     display: flex;
   }
 
   .nav-links {
+    display: none;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--color-primary);
-    flex-direction: column;
+    background: #0D3B36;
     padding: 16px 24px;
-    gap: 16px;
-    display: none;
   }
 
   .nav-links.open {
@@ -313,10 +267,5 @@ ul {
 
   .hero h1 {
     font-size: 2rem;
-  }
-
-  .dept-grid,
-  .why-grid {
-    grid-template-columns: 1fr;
   }
 }
