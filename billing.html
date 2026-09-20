@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Billing | MediCare Central</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Member 4 CSS -->
+    <link rel="stylesheet" href="css/member4.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="index.html">
+                MediCare Central
+            </a>
+
+            <div class="navbar-nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="patients.html">Patients</a>
+                <a class="nav-link" href="doctors.html">Doctors</a>
+                <a class="nav-link" href="departments.html">Departments</a>
+                <a class="nav-link" href="appointments.html">Appointments</a>
+                <a class="nav-link" href="services.html">Services</a>
+                <a class="nav-link" href="Pharmacy.html">Pharmacy</a>
+                <a class="nav-link active" href="billing.html">Billing</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- ================= BILLING HERO ================= -->
+
+    <section class="billing-hero">
+
+        <div class="container">
+
+            <p class="eyebrow">PATIENT BILLING</p>
+
+            <h1>
+                Clear & Simple<br>
+                <span>Healthcare Billing.</span>
+            </h1>
+
+            <p class="hero-description">
+                Manage patient billing details, healthcare services,
+                and payment information in one place.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BILLING SECTION ================= -->
+
+    <section class="billing-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="eyebrow">BILLING DETAILS</p>
+
+                <h2>Patient Invoice</h2>
+
+                <p>
+                    Review the patient's services and payment summary.
+                </p>
+            </div>
+
+
+            <!-- Patient Information -->
+
+            <div class="billing-card">
+
+                <div class="billing-card-header">
+                    <h3>Patient Information</h3>
+                    <span class="bill-status">PAID</span>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+                        <p class="billing-label">Patient Name</p>
+                        <p class="billing-value">Aarav Sharma</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p class="billing-label">Patient ID</p>
+                        <p class="billing-value">MC-10245</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p class="billing-label">Invoice Number</p>
+                        <p class="billing-value">INV-2026-084</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p class="billing-label">Admission Date</p>
+                        <p class="billing-value">18 September 2026</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p class="billing-label">Discharge Date</p>
+                        <p class="billing-value">20 September 2026</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p class="billing-label">Payment Method</p>
+                        <p class="billing-value">UPI</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Services Table -->
+
+            <div class="billing-card">
+
+                <div class="billing-card-header">
+                    <h3>Services & Charges</h3>
+                </div>
+
+                <div class="table-responsive">
+
+                    <table class="table billing-table">
+
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Service</th>
+                                <th>Category</th>
+                                <th>Quantity</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>01</td>
+                                <td>Doctor Consultation</td>
+                                <td>Consultation</td>
+                                <td>1</td>
+                                <td>₹500</td>
+                            </tr>
+
+                            <tr>
+                                <td>02</td>
+                                <td>Blood Test</td>
+                                <td>Laboratory</td>
+                                <td>1</td>
+                                <td>₹350</td>
+                            </tr>
+
+                            <tr>
+                                <td>03</td>
+                                <td>Medicines</td>
+                                <td>Pharmacy</td>
+                                <td>3</td>
+                                <td>₹620</td>
+                            </tr>
+
+                            <tr>
+                                <td>04</td>
+                                <td>Room Charges</td>
+                                <td>Inpatient Care</td>
+                                <td>2 Days</td>
+                                <td>₹2,000</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- Payment Summary -->
+
+            <div class="row g-4">
+
+                <div class="col-lg-7">
+
+                    <div class="billing-card billing-note">
+
+                        <p class="eyebrow">PAYMENT INFORMATION</p>
+
+                        <h3>Thank you for choosing MediCare Central.</h3>
+
+                        <p>
+                            This invoice provides a summary of healthcare
+                            services and associated charges for the patient.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-5">
+
+                    <div class="billing-card billing-summary">
+
+                        <h3>Payment Summary</h3>
+
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <strong>₹3,470</strong>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Tax</span>
+                            <strong>₹180</strong>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Discount</span>
+                            <strong>- ₹150</strong>
+                        </div>
+
+                        <hr>
+
+                        <div class="summary-total">
+                            <span>Total Amount</span>
+                            <strong>₹3,500</strong>
+                        </div>
+
+                        <button class="gold-button billing-button">
+                            Print Invoice
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="main-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+                    <h3>MediCare Central</h3>
+                    <p>
+                        Compassionate healthcare supported by
+                        modern medical services.
+                    </p>
+                </div>
+
+                <div>
+                    <p>Healthcare Services</p>
+                    <p>Patient Care</p>
+                    <p>Pharmacy & Billing</p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 MediCare Central. All rights reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
