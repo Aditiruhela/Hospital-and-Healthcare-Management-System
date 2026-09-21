@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments | MediCare</title>
+
+    <link rel="stylesheet" href="appointments.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>MediCare</h1>
+
+        <nav>
+            <a href="../homepage/index.html">Home</a>
+            <a href="../patients/patients.html">Patients</a>
+            <a href="../doctors/doctors.html">Doctors</a>
+            <a href="../departments/departments.html">Departments</a>
+            <a href="appointments.html">Appointments</a>
+            <a href="../services/services.html">Services</a>
+            <a href="../pharmacy/pharmacy.html">Pharmacy</a>
+            <a href="../billing/billing.html">Billing</a>
+            <a href="../contact/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Appointment Management</h2>
+            <p>Schedule and manage hospital appointments easily.</p>
+        </section>
+
+        <section>
+            <h2>Schedule Appointment</h2>
+
+            <form>
+
+                <label for="patient-name">Patient Name</label>
+                <input type="text" id="patient-name" name="patient-name" required>
+
+                <label for="doctor-name">Doctor Name</label>
+                <input type="text" id="doctor-name" name="doctor-name" required>
+
+                <label for="appointment-type">Appointment Type</label>
+                <select id="appointment-type" name="appointment-type" required>
+                    <option value="">Select Type</option>
+                    <option value="consultation">Consultation</option>
+                    <option value="follow-up">Follow-up</option>
+                    <option value="emergency">Emergency</option>
+                </select>
+
+                <label for="appointment-date">Date</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+
+                <label for="appointment-time">Time</label>
+                <input type="time" id="appointment-time" name="appointment-time" required>
+
+                <label for="reason">Reason for Visit</label>
+                <textarea id="reason" name="reason" rows="4" required></textarea>
+
+                <button type="submit">Schedule Appointment</button>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Appointment Records</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Doctor Name</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Rahul Sharma</td>
+                        <td>Dr. Amit Verma</td>
+                        <td>Consultation</td>
+                        <td>20 Sep 2026</td>
+                        <td>10:00 AM</td>
+                        <td>Confirmed</td>
+                    </tr>
+
+                    <tr>
+                        <td>Priya Singh</td>
+                        <td>Dr. Neha Kapoor</td>
+                        <td>Follow-up</td>
+                        <td>21 Sep 2026</td>
+                        <td>11:30 AM</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MediCare Hospital. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
