@@ -1,0 +1,165 @@
+/* General page styling */
+:root {
+    --color-primary: #0D3B36;
+    --color-secondary: #6B9080;
+    --color-accent: #E8A33D;
+    --color-bg: #FAFAF7;
+    --color-text: #1A2B27;
+    --color-text-light: #4A5D57;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 20px 6%;
+}
+
+header h1 {
+    margin-bottom: 15px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--color-accent);
+}
+
+/* Main content */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+section p {
+    color: var(--color-text-light);
+}
+
+/* Appointment form */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+form label {
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd5d1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    grid-column: 1 / -1;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Appointment table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+tr:hover {
+    background-color: #f2f6f4;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    nav {
+        gap: 12px;
+    }
+}
