@@ -79,20 +79,15 @@ a {
     font-weight: 700;
 }
 
-.logo-icon {
-    width: 35px;
-    height: 35px;
+.logo a {
+    font-family: var(--heading-font);
+    font-size: 1.3rem;
+    color: var(--color-white);
+    font-weight: 500;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--color-accent);
-    color: var(--color-primary);
-    border-radius: 8px;
-
-    font-family: Arial, sans-serif;
-    font-weight: bold;
+.logo a span {
+    color: var(--color-accent);
 }
 
 .navbar {
