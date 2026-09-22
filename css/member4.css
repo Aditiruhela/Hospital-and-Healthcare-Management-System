@@ -31,14 +31,14 @@ h3 {
     padding: 18px 0;
 }
 
-.hospital-logo {
+.main-navbar .navbar-brand {
     color: #ffffff !important;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 27px;
     font-weight: bold;
 }
 
-.hospital-logo span {
+.main-navbar .navbar-brand span {
     color: #f2a93b;
 }
 
