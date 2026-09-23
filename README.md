@@ -1,1 +1,2 @@
-Mini Project 3-Y
+# Mini Project 3Y
+Hospital & Healthcare Management System
