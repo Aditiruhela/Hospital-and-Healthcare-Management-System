@@ -1,0 +1,417 @@
+.site-theme-toggle {
+  flex: 0 0 auto;
+  margin-left: 12px;
+  padding: 8px 14px;
+  border: 1px solid #d6e3de;
+  border-radius: 999px;
+  background: #0d3b36;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.site-theme-toggle:hover {
+  border-color: #e8a33d;
+}
+
+.site-theme-toggle:focus-visible {
+  outline: 3px solid #e8a33d;
+  outline-offset: 3px;
+}
+
+/* ===============================
+   UNIFIED MEDICARE NAVIGATION
+   =============================== */
+
+.unified-site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  margin: 0;
+  padding: 0 !important;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(255 255 255 / 8%);
+  background: #0d3b36 !important;
+  box-shadow: 0 8px 24px rgb(5 25 22 / 10%);
+  backdrop-filter: blur(14px);
+}
+
+.unified-navbar {
+  box-sizing: border-box;
+  width: min(1300px, calc(100% - 40px));
+  height: 76px;
+  min-height: 76px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 12px 0;
+  background: transparent;
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.2;
+}
+
+.unified-navbar *,
+.unified-navbar *::before,
+.unified-navbar *::after {
+  box-sizing: border-box;
+}
+
+.unified-navbar .logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff !important;
+  text-decoration: none;
+  font-family: "Lora", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.unified-navbar .logo-mark {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #35c7ff;
+  color: #082033;
+  font-family: Arial, sans-serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 8px 22px rgb(53 199 255 / 18%);
+}
+
+.unified-navbar .logo-name b {
+  color: #35c7ff;
+  font-weight: 700;
+}
+
+.unified-navbar .nav-links {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1.15vw, 18px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: transparent;
+}
+
+.unified-navbar .nav-links a,
+.unified-navbar .navbar-nav a {
+  position: relative;
+  display: block;
+  padding: 12px 0 9px;
+  border: 0;
+  color: #edf5f2 !important;
+  text-decoration: none;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition: color 160ms ease;
+}
+
+.unified-navbar .nav-links a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  left: 0;
+  height: 2px;
+  border-radius: 99px;
+  background: #35c7ff;
+  transform: scaleX(0);
+  transition: transform 160ms ease;
+}
+
+.unified-navbar .nav-links a:hover,
+.unified-navbar .nav-links a.active {
+  color: #35c7ff !important;
+}
+
+.unified-navbar .nav-links a:hover::after,
+.unified-navbar .nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+.unified-navbar .theme-btn,
+.unified-navbar .site-theme-toggle {
+  height: 38px;
+  flex: 0 0 auto;
+  margin-left: 0;
+  border: 1px solid rgb(53 199 255 / 55%);
+  border-radius: 999px;
+  background: rgb(53 199 255 / 8%);
+  color: #64d8ff;
+  font-size: 0.82rem;
+}
+
+.unified-navbar .nav-toggle {
+  width: 38px;
+  height: 38px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 9px;
+  background: rgb(255 255 255 / 6%);
+  cursor: pointer;
+}
+
+.unified-navbar .nav-toggle span {
+  width: 18px;
+  height: 2px;
+  border-radius: 99px;
+  background: #fff;
+}
+
+@media (max-width: 1180px) {
+  .unified-navbar {
+    width: min(100% - 32px, 1300px);
+  }
+
+  .unified-navbar .nav-toggle {
+    display: flex;
+  }
+
+  .unified-navbar .nav-links {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 16px;
+    left: 16px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    padding: 12px;
+    border: 1px solid rgb(255 255 255 / 10%);
+    border-radius: 0 0 14px 14px;
+    background: #0d3b36;
+    box-shadow: 0 18px 36px rgb(0 0 0 / 22%);
+  }
+
+  .unified-navbar .nav-links.open {
+    display: flex;
+  }
+
+  .unified-navbar .nav-links li,
+  .unified-navbar .nav-links a {
+    width: 100%;
+  }
+
+  .unified-navbar .nav-links a {
+    padding: 10px 12px;
+    border-radius: 8px;
+  }
+
+  .unified-navbar .nav-links a::after {
+    display: none;
+  }
+
+  .unified-navbar .nav-links a:hover,
+  .unified-navbar .nav-links a.active {
+    background: rgb(53 199 255 / 10%);
+  }
+}
+
+@media (max-width: 520px) {
+  .unified-navbar {
+    width: calc(100% - 24px);
+    gap: 8px;
+  }
+
+  .unified-navbar .logo-name {
+    font-size: 1.05rem;
+  }
+
+  .unified-navbar .logo-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .unified-navbar .theme-btn,
+  .unified-navbar .site-theme-toggle {
+    width: 38px;
+    padding: 0;
+    overflow: hidden;
+    color: transparent;
+  }
+
+  .unified-navbar .theme-btn::first-letter,
+  .unified-navbar .site-theme-toggle::first-letter {
+    color: #64d8ff;
+  }
+}
+
+body.dark {
+  color-scheme: dark;
+  --theme-bg: #080d18;
+  --theme-panel: #101a2d;
+  --theme-panel-raised: #17243a;
+  --theme-border: #263a59;
+  --theme-text: #edf5ff;
+  --theme-muted: #a9b9cf;
+  --theme-accent: #35c7ff;
+  --theme-accent-bright: #64d8ff;
+  --theme-accent-soft: rgb(53 199 255 / 12%);
+  background:
+    radial-gradient(circle at 86% 12%, rgb(53 199 255 / 8%), transparent 24rem),
+    #080d18 !important;
+  color: var(--theme-text) !important;
+}
+
+body.dark :where(main, section) {
+  background-color: #101a2d !important;
+  color: var(--theme-text) !important;
+}
+
+body.dark :where(header, footer, .header, .site-header, .main-navbar, .site-footer, .main-footer) {
+  background-color: #101a2d !important;
+  color: #e6edf7 !important;
+}
+
+body.dark :where(.hero, .page-intro, .page-header, .department-header, .schedule-header,
+  .contact-hero, .services-hero, .pharmacy-hero, .billing-hero, .emergency-banner, .pharmacy-note) {
+  background:
+    radial-gradient(circle at 82% 18%, rgb(53 199 255 / 9%), transparent 20rem),
+    linear-gradient(135deg, #101d35, #080d18) !important;
+  color: var(--theme-text) !important;
+}
+
+body.dark :where(.doctor-controls, .doctor-card, .department-card, .contact-card, .contact-form,
+  .faq-card, .full-profile, .info-box, .schedule-table-container, .schedule-note, .form-card,
+  .table-card, .billing-card, .service-card, .medicine-card, .dept-card) {
+  border-color: var(--theme-border) !important;
+  background: linear-gradient(145deg, var(--theme-panel-raised), var(--theme-panel)) !important;
+  color: var(--theme-text) !important;
+  box-shadow: 0 14px 34px rgb(0 0 0 / 22%);
+}
+
+body.dark .dept-card {
+  border-left-color: var(--theme-accent) !important;
+}
+
+body.dark :where(.department-icon, .service-icon, .medicine-icon, .billing-card-header) {
+  border-color: var(--theme-border) !important;
+  background-color: var(--theme-panel-raised) !important;
+  color: var(--theme-text) !important;
+}
+
+body.dark .schedule-table th {
+  background-color: #101a2d !important;
+}
+
+body.dark .schedule-table td:first-child {
+  color: var(--theme-text) !important;
+}
+
+body.dark :where(h1, h2, h3, h4, p, li, label, td, th, .section-heading, .doctor-info strong,
+  .medicine-info span, .summary-row, .summary-total, .profile-details p, .profile-info p,
+  .billing-value, .billing-table tbody td, .section-heading p:last-child) {
+  color: var(--theme-text) !important;
+}
+
+body.dark :where(.section-label, .eyebrow, .service-number, .medicine-category, .billing-label,
+  .contact-hero h1 span, .logo-name b, .main-footer h3 span) {
+  color: var(--theme-accent) !important;
+}
+
+body.dark .unified-navbar .logo-mark {
+  color: #082033 !important;
+}
+
+body.dark :where(a) {
+  color: var(--theme-accent-bright);
+}
+
+body.dark :where(.logo, .logo a, .navbar-brand, .navbar a, .navbar-nav a, .nav-links a, header nav a) {
+  color: var(--theme-text) !important;
+}
+
+body.dark :where(.nav-links a.active, .navbar a.active, .navbar-nav a.active,
+  .nav-links a:hover, .navbar a:hover, .navbar-nav a:hover) {
+  color: var(--theme-accent) !important;
+}
+
+body.dark :where(input, select, textarea) {
+  border-color: var(--theme-border) !important;
+  background-color: #101a2d !important;
+  color: var(--theme-text) !important;
+}
+
+body.dark :where(input, select, textarea)::placeholder {
+  color: var(--theme-muted);
+}
+
+body.dark :where(table, .table) {
+  --bs-table-bg: #101a2d;
+  --bs-table-color: var(--theme-text);
+  --bs-table-border-color: var(--theme-border);
+  color: var(--theme-text) !important;
+}
+
+body.dark :where(tbody tr:hover, .billing-table tbody tr:hover) {
+  background-color: var(--theme-panel-raised) !important;
+}
+
+body.dark :where(.site-theme-toggle, .secondary-btn, .profile-btn.outline) {
+  border-color: var(--theme-accent) !important;
+  background-color: #101a2d !important;
+  color: var(--theme-accent-bright) !important;
+}
+
+body.dark :where(.department-btn, .profile-btn:not(.outline), .schedule-btn, .btn:not(.secondary-btn)) {
+  border-color: var(--theme-accent) !important;
+  background: var(--theme-accent) !important;
+  color: #071827 !important;
+  box-shadow: 0 10px 24px rgb(53 199 255 / 16%);
+}
+
+body.dark .gold-button {
+  background: var(--theme-accent) !important;
+  color: #071827 !important;
+}
+
+body.dark :where(.available, .active-status) {
+  background-color: #123d36 !important;
+  color: #7ee0aa !important;
+}
+
+body.dark .bill-status {
+  background-color: #123d36 !important;
+  color: #7ee0aa !important;
+}
+
+body.dark :where(.busy, .completed-status) {
+  background-color: #40272d !important;
+  color: #ffaaaa !important;
+}
+
+body.dark .status.leave {
+  background-color: #40272d !important;
+  color: #ffaaaa !important;
+}
+
+@media (max-width: 700px) {
+  .site-theme-toggle {
+    margin-left: 0;
+  }
+}
