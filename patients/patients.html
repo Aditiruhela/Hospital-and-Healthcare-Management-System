@@ -12,33 +12,34 @@
 
     <!-- Patient CSS -->
     <link rel="stylesheet" href="patients.css">
+    <link rel="stylesheet" href="../css/theme.css">
 </head>
 
 <body>
 
     <!-- ================= HEADER ================= -->
-    <header class="header">
-        <div class="nav-container">
-
-            <div class="logo">
-                <a href="../homepage/index.html">
-                    MediCare <span>Central</span>
-                </a>
-            </div>
-
-            <nav class="navbar">
-                <a href="../homepage/index.html">Home</a>
-                <a href="patients.html" class="active">Patients</a>
-                <a href="../doctors/doctors.html">Doctors</a>
-                <a href="../departments/departments.html">Departments</a>
-                <a href="../appointments/appointments.html">Appointments</a>
-                <a href="../services/services.html">Services</a>
-                <a href="../pharmacy/pharmacy.html">Pharmacy</a>
-                <a href="../billing/billing.html">Billing</a>
-                <a href="../contact/contact.html">Contact</a>
-            </nav>
-
-        </div>
+    <header class="site-header unified-site-header">
+        <nav class="navbar unified-navbar" aria-label="Main navigation">
+            <a class="logo" href="../homepage/index.html">
+                <span class="logo-mark" aria-hidden="true">+</span>
+                <span class="logo-name">MediCare <b>Central</b></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../homepage/index.html">Home</a></li>
+                <li><a class="active" aria-current="page" href="../patients/patients.html">Patients</a></li>
+                <li><a href="../doctors/doctors.html">Doctors</a></li>
+                <li><a href="../departments/departments.html">Departments</a></li>
+                <li><a href="../appointments/appointments.html">Appointments</a></li>
+                <li><a href="../services/services.html">Services</a></li>
+                <li><a href="../Pharmacy/Pharmacy.html">Pharmacy</a></li>
+                <li><a href="../billing/billing.html">Billing</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+            <button type="button" id="themeToggle" class="theme-btn site-theme-toggle">🌙 Dark</button>
+            <button type="button" class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
     </header>
 
 
@@ -135,13 +136,8 @@
                                     id="phone"
                                     name="phone"
                                     placeholder="Enter phone number"
-                                    type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    placeholder="Enter phone number"
                                     pattern="[0-9]{10}"
                                     maxlength="10"
-                                    
                                 >
                             </div>
 
@@ -187,23 +183,9 @@
                                     id="emergency-contact"
                                     name="emergency-contact"
                                     placeholder="Emergency contact number"
-                                    type="tel"
-                                    id="emergency"
-                                    name="emergency"
-                                    placeholder="Enter emergency contact"
                                     pattern="[0-9]{10}"
                                     maxlength="10"
-                                    required    
-                                >
-                            </div>
-
-                        </div>
-
-                        <button type="submit" class="btn">
-                            Register Patient
-    maxlength="10"
-    required
->
+                                    required
                                 >
                             </div>
 
@@ -458,5 +440,6 @@
 
     </footer>
 
+    <script src="../js/theme.js"></script>
 </body>
 </html>

@@ -9,71 +9,34 @@
 
     <link rel="stylesheet" href="../homepage/style.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/theme.css">
 </head>
 
 <body>
 
     <!-- ================= NAVIGATION BAR ================= -->
 
-    <header class="site-header">
-        <nav class="navbar">
-
-            <a href="../homepage/index.html" class="logo">
-                MediCare <span>Central</span>
+    <header class="site-header unified-site-header">
+        <nav class="navbar unified-navbar" aria-label="Main navigation">
+            <a class="logo" href="../homepage/index.html">
+                <span class="logo-mark" aria-hidden="true">+</span>
+                <span class="logo-name">MediCare <b>Central</b></span>
             </a>
-
             <ul class="nav-links">
-
-                <li>
-                    <a href="../homepage/index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="../patients/patients.html">Patients</a>
-                </li>
-
-                <li>
-                    <a href="../doctors/doctors.html">Doctors</a>
-                </li>
-
-                <li>
-                    <a href="departments.html" class="active">
-                        Departments
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../appointments/appointments.html">
-                        Appointments
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../services/services.html">
-                        Services
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../pharmacy/pharmacy.html">
-                        Pharmacy
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../billing/billing.html">
-                        Billing
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../contact/contact.html">
-                        Contact
-                    </a>
-                </li>
-
+                <li><a href="../homepage/index.html">Home</a></li>
+                <li><a href="../patients/patients.html">Patients</a></li>
+                <li><a href="../doctors/doctors.html">Doctors</a></li>
+                <li><a class="active" aria-current="page" href="../departments/departments.html">Departments</a></li>
+                <li><a href="../appointments/appointments.html">Appointments</a></li>
+                <li><a href="../services/services.html">Services</a></li>
+                <li><a href="../Pharmacy/Pharmacy.html">Pharmacy</a></li>
+                <li><a href="../billing/billing.html">Billing</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
             </ul>
-
+            <button type="button" id="themeToggle" class="theme-btn site-theme-toggle">🌙 Dark</button>
+            <button type="button" class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
     </header>
 
@@ -411,6 +374,7 @@
 
     </footer>
 
+    <script src="../js/theme.js"></script>
 </body>
 
 </html>

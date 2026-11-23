@@ -41,11 +41,6 @@ body {
     font-weight: 600;
     white-space: nowrap;
 }
-
-.logo span {
-    color: #f2a93b;
-}
-
 .nav-links {
     list-style: none;
     display: flex;

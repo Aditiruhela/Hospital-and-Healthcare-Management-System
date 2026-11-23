@@ -5,27 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hospital & Healthcare Management</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css">
 </head>
 
 <body>
 
-  <header class="site-header">
-    <nav class="navbar">
-      <a href="index.html" class="logo">MediCare <span>Central</span></a>
-
-      <ul class="nav-links">
-        <li><a href="../homepage/index.html" class="active">Home</a></li>
-        <li><a href="../patients/patients.html">Patients</a></li>
-        <li><a href="../doctors/doctors.html">Doctors</a></li>
-        <li><a href="../departments/departments.html">Departments</a></li>
-        <li><a href="../appointments/appointments.html">Appointments</a></li>
-        <li><a href="../services/services.html">Services</a></li>
-        <li><a href="../Pharmacy.html">Pharmacy</a></li>
-        <li><a href="../billing.html">Billing</a></li>
-        <li><a href="../contact/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="site-header unified-site-header">
+  <nav class="navbar unified-navbar" aria-label="Main navigation">
+    <a class="logo" href="../homepage/index.html">
+      <span class="logo-mark" aria-hidden="true">+</span>
+      <span class="logo-name">MediCare <b>Central</b></span>
+    </a>
+    <ul class="nav-links">
+      <li><a class="active" aria-current="page" href="../homepage/index.html">Home</a></li>
+      <li><a href="../patients/patients.html">Patients</a></li>
+      <li><a href="../doctors/doctors.html">Doctors</a></li>
+      <li><a href="../departments/departments.html">Departments</a></li>
+      <li><a href="../appointments/appointments.html">Appointments</a></li>
+      <li><a href="../services/services.html">Services</a></li>
+      <li><a href="../Pharmacy/Pharmacy.html">Pharmacy</a></li>
+      <li><a href="../billing/billing.html">Billing</a></li>
+      <li><a href="../contact/contact.html">Contact</a></li>
+    </ul>
+    <button type="button" id="themeToggle" class="theme-btn site-theme-toggle">🌙 Dark</button>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
 
   <section class="hero">
     <div class="hero-content">
@@ -38,7 +46,7 @@
       </p>
 
       <div class="hero-actions">
-        <a href="appointments.html" class="btn btn-primary">
+        <a href="../appointments/appointments.html" class="btn btn-primary">
           Book an appointment
         </a>
 
@@ -140,13 +148,13 @@
       </div>
     </div>
   </section>
-  
+
   <footer class="site-footer">
     <div class="footer-content">
       <p>&copy; 2026 MediCare Central. Built for GLA University coursework.</p>
-      
+
     </div>
   </footer>
-
+<script src="../js/theme.js"></script>
 </body>
 </html>
