@@ -1216,3 +1216,35 @@ h3 {
         padding: 13px 20px;
     }
 }
+.service-dialog {
+    width: min(90%, 500px);
+    border: none;
+    border-radius: 16px;
+    padding: 35px;
+    margin: auto;
+    background: #f8f7f2;
+    color: #0b4f47;
+}
+
+.service-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.dialog-content {
+    position: relative;
+}
+
+.dialog-content h2 {
+    margin: 15px 0;
+}
+
+.dialog-close {
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #0b4f47;
+}

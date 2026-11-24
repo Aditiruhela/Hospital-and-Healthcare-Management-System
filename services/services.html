@@ -157,7 +157,7 @@
                             support for patients in critical situations.
                         </p>
 
-                        <a href="#" class="service-link">
+                        <a href="#" data-service="emergency"class="service-link">
                             Learn more →
                         </a>
 
@@ -189,7 +189,7 @@
                             services for accurate medical results.
                         </p>
 
-                        <a href="#" class="service-link">
+                        <a href="#" data-service="laboratory" class="service-link">
                             Learn more →
                         </a>
 
@@ -221,7 +221,7 @@
                             continuous monitoring and patient support.
                         </p>
 
-                        <a href="#" class="service-link">
+                        <a href="#" data-service="ICU" class="service-link">
                             Learn more →
                         </a>
 
@@ -253,7 +253,7 @@
                             for patients requiring immediate medical care.
                         </p>
 
-                        <a href="#" class="service-link">
+                        <a href="#" data-service="ambulance" class="service-link">
                             Learn more →
                         </a>
 
@@ -285,7 +285,7 @@
                             routine and emergency healthcare requirements.
                         </p>
 
-                        <a href="#" class="service-link">
+                        <a href="#" data-service="blood" class="service-link">
                             Learn more →
                         </a>
 
@@ -317,7 +317,7 @@
                             by experienced healthcare professionals.
                         </p>
 
-                        <a href="#" class="service-link">
+                        <a href="#" data-service="surgery" class="service-link">
                             Learn more →
                         </a>
 
@@ -360,7 +360,7 @@
 
                 <div class="col-lg-4 text-lg-end">
 
-                    <a href="#" class="gold-button">
+                    <a href="../contact/contact.html" class="gold-button">
                         Emergency Contact
                     </a>
 
@@ -371,6 +371,17 @@
         </div>
 
     </section>
+    <dialog id="serviceDialog" class="service-dialog">
+        <div class="dialog-content">
+            <button type="button" id="closeServiceDialog" class="dialog-close">
+                &times;
+            </button>
+
+            <p class="eyebrow">MEDICARE CENTRAL</p>
+            <h2 id="dialogServiceTitle">Service Details</h2>
+            <p id="dialogServiceDescription"></p>
+        </div>
+    </dialog>
 
 
     <!-- ================= FOOTER ================= -->
@@ -413,6 +424,7 @@
     </footer>
 
     <script src="../js/theme.js"></script>
+    <script src="services.js"></script>
 </body>
 
 </html>
