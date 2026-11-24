@@ -182,7 +182,7 @@
 
             <div class="contact-form">
 
-                <form>
+                <form id="contactForm">
 
                     <div class="form-row">
 
@@ -194,6 +194,7 @@
                                 id="name"
                                 name="name"
                                 placeholder="Enter your name"
+                                required
                             >
                         </div>
 
@@ -205,6 +206,7 @@
                                 id="email"
                                 name="email"
                                 placeholder="Enter your email"
+                                required
                             >
                         </div>
 
@@ -220,6 +222,7 @@
                             id="subject"
                             name="subject"
                             placeholder="What can we help you with?"
+                            required
                         >
 
                     </div>
@@ -242,6 +245,8 @@
                     <button type="submit" class="gold-button">
                         Send Message
                     </button>
+
+                    <p id="formMessage" class="form-message" role="status"></p>
 
                 </form>
 
@@ -350,5 +355,7 @@
     </footer>
 
     <script src="../js/theme.js"></script>
+    <script src="contact.js"></script>
+    
 </body>
 </html>
