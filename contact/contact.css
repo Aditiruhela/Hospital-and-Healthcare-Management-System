@@ -492,3 +492,8 @@ body {
         padding: 28px 20px;
     }
 }
+.form-message {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 14px;
+}
