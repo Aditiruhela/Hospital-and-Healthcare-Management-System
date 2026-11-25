@@ -9,57 +9,34 @@
 
     <link rel="stylesheet" href="../homepage/style.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/theme.css">
 </head>
 
 <body>
 
     <!-- ================= NAVIGATION BAR ================= -->
 
-    <header class="site-header">
-        <nav class="navbar">
-
-            <a href="../homepage/index.html" class="logo">
-                MediCare <span>Central</span>
+    <header class="site-header unified-site-header">
+        <nav class="navbar unified-navbar" aria-label="Main navigation">
+            <a class="logo" href="../homepage/index.html">
+                <span class="logo-mark" aria-hidden="true">+</span>
+                <span class="logo-name">MediCare <b>Central</b></span>
             </a>
-
             <ul class="nav-links">
-                <li>
-                    <a href="../homepage/index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="../patients/patients.html">Patients</a>
-                </li>
-
-                <li>
-                    <a href="doctors.html" class="active">Doctors</a>
-                </li>
-
-                <li>
-                    <a href="../departments/departments.html">Departments</a>
-                </li>
-
-                <li>
-                    <a href="../appointments/appointments.html">Appointments</a>
-                </li>
-
-                <li>
-                    <a href="../services/services.html">Services</a>
-                </li>
-
-                <li>
-                    <a href="../pharmacy/pharmacy.html">Pharmacy</a>
-                </li>
-
-                <li>
-                    <a href="../billing/billing.html">Billing</a>
-                </li>
-
-                <li>
-                    <a href="../contact/contact.html">Contact</a>
-                </li>
+                <li><a href="../homepage/index.html">Home</a></li>
+                <li><a href="../patients/patients.html">Patients</a></li>
+                <li><a class="active" aria-current="page" href="../doctors/doctors.html">Doctors</a></li>
+                <li><a href="../departments/departments.html">Departments</a></li>
+                <li><a href="../appointments/appointments.html">Appointments</a></li>
+                <li><a href="../services/services.html">Services</a></li>
+                <li><a href="../Pharmacy/Pharmacy.html">Pharmacy</a></li>
+                <li><a href="../billing/billing.html">Billing</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
             </ul>
-
+            <button type="button" id="themeToggle" class="theme-btn site-theme-toggle">🌙 Dark</button>
+            <button type="button" class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
     </header>
 
@@ -93,11 +70,7 @@
 
             <label for="doctor-search">Search Doctor</label>
 
-            <input
-                type="text"
-                id="doctor-search"
-                placeholder="Enter doctor's name..."
-            >
+            <input type="text" id="doctor-search" placeholder="Search by doctor's name or specialization...">
 
         </div>
 
@@ -126,6 +99,22 @@
 
         </div>
 
+        <div class="filter-box">
+
+            <label for="availability-filter">Availability</label>
+
+            <select id="availability-filter">
+
+                <option value="">All Statuses</option>
+
+                <option value="available">Available</option>
+
+                <option value="busy">On Leave</option>
+
+            </select>
+
+        </div>
+
     </section>
 
 
@@ -143,6 +132,8 @@
                 Choose a specialist according to your healthcare needs.
             </p>
 
+            <p id="doctor-count" class="doctor-count">Showing 6 doctors</p>
+
         </div>
 
 
@@ -151,13 +142,14 @@
 
             <!-- Doctor 1 -->
 
-            <article class="doctor-card">
+            <article class="doctor-card" data-id="1" data-name="Dr. Rahul Sharma" data-specialization="Cardiologist"
+                data-department="cardiology" data-status="available" data-experience="12 Years"
+                data-qualification="MBBS, MD" data-rating="★ 4.8 / 5" data-hours="10:00 AM - 2:00 PM"
+                data-about="Dr. Rahul Sharma is an experienced cardiologist specializing in heart diseases, cardiac care, and preventive cardiology.">
 
                 <div class="doctor-image">
-                    <img
-                        src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=500&q=80"
-                        alt="Dr. Rahul Sharma"
-                    >
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=500&q=80"
+                        alt="Dr. Rahul Sharma">
                 </div>
 
                 <div class="doctor-info">
@@ -186,13 +178,11 @@
 
                     <div class="doctor-buttons">
 
-                        <a href="../doctor-profile/doctor-profile.html"
-                           class="btn">
+                        <a href="../doctor-profile/doctor-profile.html" class="btn">
                             View Profile
                         </a>
 
-                        <a href="../schedule/schedule.html"
-                           class="btn secondary-btn">
+                        <a href="../schedule/schedule.html" class="btn secondary-btn">
                             Schedule
                         </a>
 
@@ -205,13 +195,14 @@
 
             <!-- Doctor 2 -->
 
-            <article class="doctor-card">
+            <article class="doctor-card" data-id="2" data-name="Dr. Priya Singh" data-specialization="Neurologist"
+                data-department="neurology" data-status="available" data-experience="9 Years"
+                data-qualification="MBBS, DM" data-rating="★ 4.9 / 5" data-hours="11:00 AM - 3:00 PM"
+                data-about="Dr. Priya Singh specializes in neurological disorders, stroke management, headaches, and nervous system care.">
 
                 <div class="doctor-image">
-                    <img
-                        src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80"
-                        alt="Dr. Priya Singh"
-                    >
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80"
+                        alt="Dr. Priya Singh">
                 </div>
 
                 <div class="doctor-info">
@@ -240,13 +231,11 @@
 
                     <div class="doctor-buttons">
 
-                        <a href="../doctor-profile/doctor-profile.html"
-                           class="btn">
+                        <a href="../doctor-profile/doctor-profile.html" class="btn">
                             View Profile
                         </a>
 
-                        <a href="../schedule/schedule.html"
-                           class="btn secondary-btn">
+                        <a href="../schedule/schedule.html" class="btn secondary-btn">
                             Schedule
                         </a>
 
@@ -259,13 +248,15 @@
 
             <!-- Doctor 3 -->
 
-            <article class="doctor-card">
+            <article class="doctor-card" data-id="3" data-name="Dr. Amit Verma"
+                data-specialization="Orthopedic Specialist" data-department="orthopedics" data-status="available"
+                data-experience="10 Years" data-qualification="MBBS, MS" data-rating="★ 4.7 / 5"
+                data-hours="9:00 AM - 1:00 PM"
+                data-about="Dr. Amit Verma provides expert treatment for bone, muscle, and joint problems including sports injuries and fractures.">
 
                 <div class="doctor-image">
-                    <img
-                        src="https://images.unsplash.com/photo-1618498082410-b4aa22193b38?auto=format&fit=crop&w=500&q=80"
-                        alt="Dr. Amit Verma"
-                    >
+                    <img src="https://images.unsplash.com/photo-1618498082410-b4aa22193b38?auto=format&fit=crop&w=500&q=80"
+                        alt="Dr. Amit Verma">
                 </div>
 
                 <div class="doctor-info">
@@ -294,13 +285,11 @@
 
                     <div class="doctor-buttons">
 
-                        <a href="../doctor-profile/doctor-profile.html"
-                           class="btn">
+                        <a href="../doctor-profile/doctor-profile.html" class="btn">
                             View Profile
                         </a>
 
-                        <a href="../schedule/schedule.html"
-                           class="btn secondary-btn">
+                        <a href="../schedule/schedule.html" class="btn secondary-btn">
                             Schedule
                         </a>
 
@@ -313,13 +302,14 @@
 
             <!-- Doctor 4 -->
 
-            <article class="doctor-card">
+            <article class="doctor-card" data-id="4" data-name="Dr. Neha Gupta" data-specialization="Pediatrician"
+                data-department="pediatrics" data-status="busy" data-experience="8 Years" data-qualification="MBBS, MD"
+                data-rating="★ 4.8 / 5" data-hours="10:00 AM - 1:00 PM"
+                data-about="Dr. Neha Gupta specializes in children's healthcare, vaccinations, growth monitoring, and common pediatric diseases.">
 
                 <div class="doctor-image">
-                    <img
-                        src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=500&q=80"
-                        alt="Dr. Neha Gupta"
-                    >
+                    <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=500&q=80"
+                        alt="Dr. Neha Gupta">
                 </div>
 
                 <div class="doctor-info">
@@ -348,13 +338,11 @@
 
                     <div class="doctor-buttons">
 
-                        <a href="../doctor-profile/doctor-profile.html"
-                           class="btn">
+                        <a href="../doctor-profile/doctor-profile.html" class="btn">
                             View Profile
                         </a>
 
-                        <a href="../schedule/schedule.html"
-                           class="btn secondary-btn">
+                        <a href="../schedule/schedule.html" class="btn secondary-btn">
                             Schedule
                         </a>
 
@@ -367,13 +355,14 @@
 
             <!-- Doctor 5 -->
 
-            <article class="doctor-card">
+            <article class="doctor-card" data-id="5" data-name="Dr. Anjali Mehta" data-specialization="Dermatologist"
+                data-department="dermatology" data-status="available" data-experience="7 Years"
+                data-qualification="MBBS, MD" data-rating="★ 4.6 / 5" data-hours="12:00 PM - 4:00 PM"
+                data-about="Dr. Anjali Mehta specializes in skin, hair, and nail disorders along with cosmetic dermatology.">
 
                 <div class="doctor-image">
-                    <img
-                       src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=500&q=80"
-                       alt="Dr. Anjali Mehta"
-                    >
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=500&q=80"
+                        alt="Dr. Anjali Mehta">
                 </div>
 
                 <div class="doctor-info">
@@ -402,13 +391,11 @@
 
                     <div class="doctor-buttons">
 
-                        <a href="../doctor-profile/doctor-profile.html"
-                           class="btn">
+                        <a href="../doctor-profile/doctor-profile.html" class="btn">
                             View Profile
                         </a>
 
-                        <a href="../schedule/schedule.html"
-                           class="btn secondary-btn">
+                        <a href="../schedule/schedule.html" class="btn secondary-btn">
                             Schedule
                         </a>
 
@@ -421,13 +408,14 @@
 
             <!-- Doctor 6 -->
 
-            <article class="doctor-card">
+            <article class="doctor-card" data-id="6" data-name="Dr. Kavita Rao" data-specialization="Gynecologist"
+                data-department="gynecology" data-status="available" data-experience="11 Years"
+                data-qualification="MBBS, MD" data-rating="★ 4.9 / 5" data-hours="9:00 AM - 12:00 PM"
+                data-about="Dr. Kavita Rao provides comprehensive women's healthcare, pregnancy care, reproductive health, and gynecological treatment.">
 
                 <div class="doctor-image">
-                    <img
-                        src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=500&q=80"
-                        alt="Dr. Kavita Rao"
-                    >
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=500&q=80"
+                        alt="Dr. Kavita Rao">
                 </div>
 
                 <div class="doctor-info">
@@ -456,13 +444,11 @@
 
                     <div class="doctor-buttons">
 
-                        <a href="../doctor-profile/doctor-profile.html"
-                           class="btn">
+                        <a href="../doctor-profile/doctor-profile.html" class="btn">
                             View Profile
                         </a>
 
-                        <a href="../schedule/schedule.html"
-                           class="btn secondary-btn">
+                        <a href="../schedule/schedule.html" class="btn secondary-btn">
                             Schedule
                         </a>
 
@@ -472,9 +458,118 @@
 
             </article>
 
+            <!-- No Results Message -->
+            <div id="no-doctors" class="no-doctors-message" style="display: none;">
+                <div class="no-results-icon">🔍</div>
+                <h3>No Doctors Found</h3>
+                <p>No specialists match your search criteria. Try adjusting your search query, department, or
+                    availability filter.</p>
+                <button type="button" id="reset-filters" class="btn secondary-btn">Reset All Filters</button>
+            </div>
+
         </div>
 
     </main>
+
+
+    <!-- ================= DOCTOR PROFILE MODAL ================= -->
+
+    <div id="doctor-profile-modal" class="doctor-modal-overlay" aria-hidden="true" role="dialog"
+        aria-labelledby="modal-doc-name">
+        <div class="doctor-modal">
+            <button type="button" class="doctor-modal-close" aria-label="Close profile modal">&times;</button>
+            <div class="modal-profile-header">
+                <img id="modal-doc-img" src="" alt="Doctor photo" class="modal-doc-photo">
+                <div class="modal-profile-title">
+                    <span id="modal-doc-status" class="doctor-status">Available</span>
+                    <h2 id="modal-doc-name">Doctor Name</h2>
+                    <p id="modal-doc-spec" class="specialization">Specialization</p>
+                    <p id="modal-doc-rating" class="rating">★ 4.8 / 5</p>
+                </div>
+            </div>
+            <div class="modal-profile-body">
+                <div class="modal-info-grid">
+                    <div>
+                        <strong>Department:</strong>
+                        <p id="modal-doc-dept">-</p>
+                    </div>
+                    <div>
+                        <strong>Qualification:</strong>
+                        <p id="modal-doc-qual">-</p>
+                    </div>
+                    <div>
+                        <strong>Experience:</strong>
+                        <p id="modal-doc-exp">-</p>
+                    </div>
+                    <div>
+                        <strong>Consultation Hours:</strong>
+                        <p id="modal-doc-hours">-</p>
+                    </div>
+                </div>
+                <div class="modal-about-section">
+                    <h4>About Doctor</h4>
+                    <p id="modal-doc-about">-</p>
+                </div>
+            </div>
+            <div class="doctor-modal-footer">
+                <button type="button" id="modal-schedule-btn" class="btn">Schedule Appointment</button>
+                <a id="modal-full-profile-link" href="../doctor-profile/doctor-profile.html"
+                    class="btn secondary-btn">View Full Profiles Page</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= SCHEDULE APPOINTMENT MODAL ================= -->
+
+    <div id="doctor-schedule-modal" class="doctor-modal-overlay" aria-hidden="true" role="dialog"
+        aria-labelledby="schedule-modal-title">
+        <div class="doctor-modal">
+            <button type="button" class="doctor-modal-close" aria-label="Close schedule modal">&times;</button>
+            <div class="schedule-modal-header">
+                <h2 id="schedule-modal-title">Schedule Appointment</h2>
+                <p>Book a consultation with our medical specialist.</p>
+            </div>
+            <div id="schedule-success" class="schedule-success-message" style="display: none;"></div>
+            <form id="schedule-form" class="schedule-form">
+                <div class="form-group">
+                    <label for="sched-doctor-name">Doctor</label>
+                    <input type="text" id="sched-doctor-name" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="sched-patient-name">Patient Full Name *</label>
+                    <input type="text" id="sched-patient-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="sched-appointment-type">Appointment Type *</label>
+                        <select id="sched-appointment-type" required>
+                            <option value="Consultation">Consultation</option>
+                            <option value="Follow-up">Follow-up</option>
+                            <option value="Emergency">Emergency</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sched-date">Preferred Date *</label>
+                        <input type="date" id="sched-date" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="sched-time">Preferred Time *</label>
+                    <input type="time" id="sched-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="sched-reason">Reason for Visit</label>
+                    <textarea id="sched-reason" rows="3"
+                        placeholder="Briefly describe your symptoms or reason for visit..."></textarea>
+                </div>
+                <div class="doctor-modal-footer">
+                    <button type="submit" class="btn">Confirm Appointment</button>
+                    <button type="button" class="btn secondary-btn schedule-cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 
     <!-- ================= FOOTER ================= -->
@@ -528,6 +623,8 @@
 
     </footer>
 
+    <script src="../js/theme.js"></script>
+    <script src="doctors.js"></script>
 </body>
 
 </html>
