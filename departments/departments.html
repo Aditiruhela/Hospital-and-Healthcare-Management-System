@@ -9,71 +9,34 @@
 
     <link rel="stylesheet" href="../homepage/style.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/theme.css">
 </head>
 
 <body>
 
     <!-- ================= NAVIGATION BAR ================= -->
 
-    <header class="site-header">
-        <nav class="navbar">
-
-            <a href="../homepage/index.html" class="logo">
-                MediCare <span>Central</span>
+    <header class="site-header unified-site-header">
+        <nav class="navbar unified-navbar" aria-label="Main navigation">
+            <a class="logo" href="../homepage/index.html">
+                <span class="logo-mark" aria-hidden="true">+</span>
+                <span class="logo-name">MediCare <b>Central</b></span>
             </a>
-
             <ul class="nav-links">
-
-                <li>
-                    <a href="../homepage/index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="../patients/patients.html">Patients</a>
-                </li>
-
-                <li>
-                    <a href="../doctors/doctors.html">Doctors</a>
-                </li>
-
-                <li>
-                    <a href="departments.html" class="active">
-                        Departments
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../appointments/appointments.html">
-                        Appointments
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../services/services.html">
-                        Services
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../pharmacy/pharmacy.html">
-                        Pharmacy
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../billing/billing.html">
-                        Billing
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../contact/contact.html">
-                        Contact
-                    </a>
-                </li>
-
+                <li><a href="../homepage/index.html">Home</a></li>
+                <li><a href="../patients/patients.html">Patients</a></li>
+                <li><a href="../doctors/doctors.html">Doctors</a></li>
+                <li><a class="active" aria-current="page" href="../departments/departments.html">Departments</a></li>
+                <li><a href="../appointments/appointments.html">Appointments</a></li>
+                <li><a href="../services/services.html">Services</a></li>
+                <li><a href="../Pharmacy/Pharmacy.html">Pharmacy</a></li>
+                <li><a href="../billing/billing.html">Billing</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
             </ul>
-
+            <button type="button" id="themeToggle" class="theme-btn site-theme-toggle">🌙 Dark</button>
+            <button type="button" class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
     </header>
 
@@ -102,6 +65,22 @@
     </section>
 
 
+    <!-- ================= DEPARTMENT SEARCH CONTROLS ================= -->
+
+    <section class="department-controls">
+
+        <div class="search-box">
+
+            <label for="department-search">Search Department</label>
+
+            <input type="text" id="department-search"
+                placeholder="Search by department name (e.g. Cardiology, Neurology, Pediatrics)...">
+
+        </div>
+
+    </section>
+
+
     <!-- ================= DEPARTMENTS ================= -->
 
     <main class="departments-section">
@@ -121,6 +100,8 @@
                 experienced specialists and modern facilities.
             </p>
 
+            <p id="department-count" class="department-count">Showing 6 departments</p>
+
         </div>
 
 
@@ -129,7 +110,7 @@
 
             <!-- ================= CARDIOLOGY ================= -->
 
-            <article class="department-card">
+            <article class="department-card" data-department="cardiology">
 
                 <div class="department-icon">
                     ❤️
@@ -152,8 +133,7 @@
                         <li>ECG & Cardiac Tests</li>
                     </ul>
 
-                    <a href="../doctors/doctors.html"
-                       class="department-btn">
+                    <a href="../doctors/doctors.html?department=cardiology" class="department-btn">
                         View Specialists →
                     </a>
 
@@ -164,7 +144,7 @@
 
             <!-- ================= NEUROLOGY ================= -->
 
-            <article class="department-card">
+            <article class="department-card" data-department="neurology">
 
                 <div class="department-icon">
                     🧠
@@ -187,8 +167,7 @@
                         <li>Headache Treatment</li>
                     </ul>
 
-                    <a href="../doctors/doctors.html"
-                       class="department-btn">
+                    <a href="../doctors/doctors.html?department=neurology" class="department-btn">
                         View Specialists →
                     </a>
 
@@ -199,7 +178,7 @@
 
             <!-- ================= ORTHOPEDICS ================= -->
 
-            <article class="department-card">
+            <article class="department-card" data-department="orthopedics">
 
                 <div class="department-icon">
                     🦴
@@ -222,8 +201,7 @@
                         <li>Sports Injuries</li>
                     </ul>
 
-                    <a href="../doctors/doctors.html"
-                       class="department-btn">
+                    <a href="../doctors/doctors.html?department=orthopedics" class="department-btn">
                         View Specialists →
                     </a>
 
@@ -234,7 +212,7 @@
 
             <!-- ================= PEDIATRICS ================= -->
 
-            <article class="department-card">
+            <article class="department-card" data-department="pediatrics">
 
                 <div class="department-icon">
                     👶
@@ -257,8 +235,7 @@
                         <li>Growth Monitoring</li>
                     </ul>
 
-                    <a href="../doctors/doctors.html"
-                       class="department-btn">
+                    <a href="../doctors/doctors.html?department=pediatrics" class="department-btn">
                         View Specialists →
                     </a>
 
@@ -269,7 +246,7 @@
 
             <!-- ================= DERMATOLOGY ================= -->
 
-            <article class="department-card">
+            <article class="department-card" data-department="dermatology">
 
                 <div class="department-icon">
                     🧴
@@ -292,8 +269,7 @@
                         <li>Cosmetic Dermatology</li>
                     </ul>
 
-                    <a href="../doctors/doctors.html"
-                       class="department-btn">
+                    <a href="../doctors/doctors.html?department=dermatology" class="department-btn">
                         View Specialists →
                     </a>
 
@@ -304,7 +280,7 @@
 
             <!-- ================= GYNECOLOGY ================= -->
 
-            <article class="department-card">
+            <article class="department-card" data-department="gynecology">
 
                 <div class="department-icon">
                     🌸
@@ -327,14 +303,22 @@
                         <li>Reproductive Healthcare</li>
                     </ul>
 
-                    <a href="../doctors/doctors.html"
-                       class="department-btn">
+                    <a href="../doctors/doctors.html?department=gynecology" class="department-btn">
                         View Specialists →
                     </a>
 
                 </div>
 
             </article>
+
+            <!-- No Departments Found Message -->
+            <div id="no-departments" class="no-departments-message" style="display: none;">
+                <div class="no-results-icon">🔍</div>
+                <h3>No Departments Found</h3>
+                <p>No medical departments match your search keyword. Try searching for Cardiology, Neurology,
+                    Orthopedics, Pediatrics, Dermatology, or Gynecology.</p>
+                <button type="button" id="reset-dept-search" class="department-btn">Show All Departments</button>
+            </div>
 
         </div>
 
@@ -411,6 +395,8 @@
 
     </footer>
 
+    <script src="../js/theme.js"></script>
+    <script src="departments.js"></script>
 </body>
 
 </html>
