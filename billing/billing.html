@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing | MediCare Central</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/member4.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+
+<body>
+
+<header class="site-header unified-site-header">
+    <nav class="navbar unified-navbar" aria-label="Main navigation">
+        <a class="logo" href="../homepage/index.html">
+            <span class="logo-mark">+</span>
+            <span class="logo-name">MediCare <b>Central</b></span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="../homepage/index.html">Home</a></li>
+            <li><a href="../patients/patients.html">Patients</a></li>
+            <li><a href="../doctors/doctors.html">Doctors</a></li>
+            <li><a href="../departments/departments.html">Departments</a></li>
+            <li><a href="../appointments/appointments.html">Appointments</a></li>
+            <li><a href="../services/services.html">Services</a></li>
+            <li><a href="../Pharmacy/Pharmacy.html">Pharmacy</a></li>
+            <li><a class="active" href="billing.html">Billing</a></li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+
+        <button type="button" id="themeToggle" class="theme-btn site-theme-toggle">Dark</button>
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+<section class="billing-hero">
+    <div class="container">
+        <p class="eyebrow">PATIENT BILLING</p>
+        <h1>Billing Management<br><span>Made Simple.</span></h1>
+        <p class="hero-description">
+            Create, manage and track patient invoices in one place.
+        </p>
+    </div>
+</section>
+
+<section class="billing-section">
+<div class="container">
+
+    <div class="section-heading">
+        <p class="eyebrow">BILLING DASHBOARD</p>
+        <h2>Patient Invoice Management</h2>
+        <p>Create invoices and manage saved patient billing records.</p>
+    </div>
+
+    <!-- CREATE INVOICE -->
+    <div class="billing-card">
+        <div class="billing-card-header">
+            <h3 id="formTitle">Create New Invoice</h3>
+            <button type="button" class="gold-button" id="newInvoiceBtn">New Invoice</button>
+        </div>
+
+        <form id="invoiceForm">
+
+            <input type="hidden" id="invoiceNumber">
+
+            <h5 class="mb-3">Patient Information</h5>
+
+            <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                    <label class="form-label" for="patientName">Patient Name</label>
+                    <input class="form-control" id="patientName" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label" for="patientId">Patient ID</label>
+                    <input class="form-control" id="patientId" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label" for="admissionDate">Admission Date</label>
+                    <input type="date" class="form-control" id="admissionDate">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label" for="invoiceDate">Invoice Date</label>
+                    <input type="date" class="form-control" id="invoiceDate" required>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="billing-card-header">
+                <h5>Services & Charges</h5>
+                <button type="button" class="btn btn-success" id="addItemBtn">+ Add Service</button>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table billing-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Service Name</th>
+                            <th>Quantity</th>
+                            <th>Price (₹)</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="itemsBody"></tbody>
+                </table>
+            </div>
+
+            <div class="row g-3 mt-4">
+                <div class="col-md-4">
+                    <label class="form-label" for="taxPercent">Tax (%)</label>
+                    <input type="number" min="0" step="0.01" value="0" id="taxPercent" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label" for="discount">Discount (₹)</label>
+                    <input type="number" min="0" value="0" id="discount" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label" for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod" class="form-select">
+                        <option>Cash</option>
+                        <option>UPI</option>
+                        <option>Card</option>
+                        <option>Net Banking</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label" for="paymentStatus">Payment Status</label>
+                    <select id="paymentStatus" class="form-select">
+                        <option>Pending</option>
+                        <option>Paid</option>
+                        <option>Partial</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="billing-card billing-summary mt-4">
+                <h3>Payment Summary</h3>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="subtotal">₹0.00</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Tax</span>
+                    <strong id="taxAmount">₹0.00</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Discount</span>
+                    <strong id="discountAmount">Calculated in total</strong>
+                </div>
+
+                <hr>
+
+                <div class="summary-total">
+                    <span>Grand Total</span>
+                    <strong id="grandTotal">₹0.00</strong>
+                </div>
+
+                <button type="submit" class="gold-button billing-button" id="saveInvoiceBtn">
+                    Save Invoice
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- SAVED INVOICES -->
+    <div class="billing-card">
+        <div class="billing-card-header">
+            <h3>Saved Invoices</h3>
+            <span class="bill-status">Records: <span id="invoiceCount">0</span></span>
+        </div>
+
+        <input type="search" class="form-control mb-4" id="invoiceSearch"
+            placeholder="Search by patient name, patient ID or invoice number">
+
+        <div class="table-responsive">
+            <table class="table billing-table">
+                <thead>
+                    <tr>
+                        <th>Invoice ID</th>
+                        <th>Patient</th>
+                        <th>Patient ID</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="savedInvoicesBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- INVOICE VIEW DIALOG -->
+<dialog id="invoiceDialog" class="service-dialog">
+    <div id="viewInvoiceContent"></div>
+
+    <div class="d-flex gap-2 mt-3">
+        <button type="button" class="btn btn-success" id="printInvoiceBtn">Print Invoice</button>
+        <button type="button" class="btn btn-secondary" id="closeInvoiceDialog">Close</button>
+    </div>
+</dialog>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div>
+                <h3>MediCare Central</h3>
+                <p>Compassionate healthcare supported by modern medical services.</p>
+            </div>
+            <div>
+                <p>Healthcare Services</p>
+                <p>Patient Care</p>
+                <p>Pharmacy & Billing</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 MediCare Central. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script src="../js/theme.js"></script>
+<script src="/billing/billing.js"></script>
+</body>
+</html>

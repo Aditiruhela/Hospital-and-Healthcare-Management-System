@@ -1,0 +1,293 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #FAFAF7;
+  color: #1A2B27;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  color: #0D3B36;
+  font-family: 'Lora', serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.hero {
+  padding: clamp(56px, 8vw, 90px) 24px;
+  background: #0D3B36;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: clamp(1.75rem, 5vw, 2.6rem);
+}
+
+.hero p {
+  margin-bottom: 32px;
+  color: #D6E3DE;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #E8A33D;
+  color: #1A2B27;
+}
+
+.btn-outline {
+  border: 1.5px solid #D6E3DE;
+  color: #fff;
+}
+
+.stats {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 24px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  color: #0D3B36;
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+}
+
+.stat-label {
+  color: #4A5D57;
+  font-size: 0.9rem;
+}
+
+.departments {
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.section-intro {
+  margin-bottom: 40px;
+  color: #4A5D57;
+}
+
+.dept-grid {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 24px;
+  text-align: left;
+}
+
+.dept-card {
+  flex: 1 1 280px;
+  padding: 24px;
+  border: 1px solid #E3E9E6;
+  border-left: 4px solid #6B9080;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.dept-card p,
+.why-item p {
+  color: #4A5D57;
+  font-size: 0.92rem;
+}
+
+.why-us {
+  padding: 64px 24px;
+  background: #F0F4F2;
+  text-align: center;
+}
+
+.why-grid {
+  display: flex;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  flex-wrap: wrap;
+  gap: 32px;
+  text-align: left;
+}
+
+.why-item {
+  flex: 1 1 280px;
+}
+
+.site-footer {
+  padding: 28px 24px;
+  background: #0D3B36;
+  color: #D6E3DE;
+}
+
+.footer-content {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.88rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a:hover {
+  color: #E8A33D;
+}
+
+@media (max-width: 640px) {
+  .hero,
+  .departments,
+  .why-us {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .stats {
+    padding: 32px 16px;
+    justify-content: center;
+    gap: 20px 12px;
+  }
+
+  .stat {
+    flex: 1 1 120px;
+  }
+
+  .dept-grid,
+  .why-grid {
+    gap: 16px;
+  }
+
+  .dept-card,
+  .why-item {
+    flex-basis: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .footer-content {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* ---------- Dark mode (navy + electric blue) ---------- */
+body.dark {
+  background:
+    radial-gradient(circle at 88% 8%, rgb(53 199 255 / 8%), transparent 26rem),
+    #080D18;
+  color: #EDF5FF;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark .stat-number {
+  color: #EDF5FF;
+}
+
+body.dark .stat-label,
+body.dark .section-intro,
+body.dark .dept-card p,
+body.dark .why-item p {
+  color: #A9B9CF;
+}
+
+/* header, footer, mobile menu */
+body.dark .site-footer {
+  background: rgb(8 13 24 / 96%);
+}
+
+/* hero: halka gradient taaki flat na lage */
+body.dark .hero {
+  background:
+    radial-gradient(circle at 72% 20%, rgb(53 199 255 / 10%), transparent 18rem),
+    linear-gradient(135deg, #101D35 0%, #080D18 100%);
+  border-bottom: 1px solid #263A59;
+}
+
+body.dark .hero p {
+  color: #B4C3D8;
+}
+
+/* cards */
+body.dark .dept-card {
+  background: linear-gradient(145deg, #17243A, #101A2D);
+  border-color: #263A59;
+  border-left-color: #35C7FF;
+  box-shadow: 0 14px 34px rgb(0 0 0 / 20%);
+}
+
+body.dark .why-us {
+  background:
+    linear-gradient(135deg, rgb(53 199 255 / 4%), transparent 45%),
+    #101A2D;
+}
+
+/* accent: amber -> electric blue */
+body.dark .btn-primary {
+  background: #35C7FF;
+  color: #071827;
+  box-shadow: 0 10px 24px rgb(53 199 255 / 18%);
+}
+
+body.dark .btn-outline {
+  border-color: #35C7FF;
+  color: #64D8FF;
+}
+
+body.dark .footer-links a:hover {
+  border-color: #35C7FF;
+  color: #64D8FF;
+}
+
+body.dark .site-footer {
+  color: #A9B9CF;
+  border-top: 1px solid #263A59;
+}
