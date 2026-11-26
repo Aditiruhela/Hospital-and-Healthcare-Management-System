@@ -346,3 +346,318 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* =========================
+   DOCTOR COUNT & NO-RESULTS
+========================= */
+
+.doctor-count {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0b8293;
+    margin-top: 10px;
+}
+
+.no-doctors-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: white;
+    padding: 50px 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #d4e1e7;
+}
+
+.no-doctors-message .no-results-icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.no-doctors-message h3 {
+    font-size: 24px;
+    color: #123b4a;
+    margin: 8px 0;
+}
+
+.no-doctors-message p {
+    color: #697780;
+    margin-bottom: 22px;
+    font-size: 15px;
+}
+
+.no-doctors-message .btn {
+    display: inline-block;
+    padding: 11px 24px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   MODAL DIALOGS (PROFILE & SCHEDULE)
+========================= */
+
+.doctor-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(14, 38, 48, 0.65);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.doctor-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.doctor-modal {
+    background: white;
+    width: 100%;
+    max-width: 620px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 16px;
+    padding: 32px 30px;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.22);
+    transform: translateY(20px);
+    transition: transform 0.25s ease;
+}
+
+.doctor-modal-overlay.active .doctor-modal {
+    transform: translateY(0);
+}
+
+.doctor-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    background: #f0f4f7;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 1;
+    color: #37474f;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.doctor-modal-close:hover {
+    background: #e2ebf0;
+    color: #123b4a;
+}
+
+.modal-profile-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e8f0f3;
+}
+
+.modal-doc-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 14px;
+    object-fit: cover;
+    background: #eaf4f7;
+    flex-shrink: 0;
+}
+
+.modal-profile-title h2 {
+    font-size: 24px;
+    margin: 8px 0 4px;
+    color: #173f4d;
+}
+
+.modal-profile-title .specialization {
+    margin-bottom: 6px;
+}
+
+.modal-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 22px 0;
+    background: #f6fafd;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid #e3eef2;
+}
+
+.modal-info-grid div strong {
+    display: block;
+    font-size: 13px;
+    color: #0b8293;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.modal-info-grid div p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #28373e;
+}
+
+.modal-about-section h4 {
+    margin: 0 0 8px;
+    color: #173f4d;
+    font-size: 16px;
+}
+
+.modal-about-section p {
+    color: #55646c;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 14px;
+}
+
+.doctor-modal-footer {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #e8f0f3;
+}
+
+.doctor-modal-footer .btn {
+    cursor: pointer;
+    flex: 1;
+}
+
+/* Schedule Form Styles */
+.schedule-modal-header h2 {
+    font-size: 24px;
+    color: #123b4a;
+    margin: 0 0 6px;
+}
+
+.schedule-modal-header p {
+    color: #66747b;
+    margin: 0 0 20px;
+    font-size: 14px;
+}
+
+.schedule-success-message {
+    background: #e3f8ed;
+    color: #146c3b;
+    border: 1px solid #a3e7be;
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.schedule-form .form-group {
+    margin-bottom: 16px;
+}
+
+.schedule-form .form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.schedule-form .form-row .form-group {
+    flex: 1;
+}
+
+.schedule-form label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #34495e;
+}
+
+.schedule-form input,
+.schedule-form select,
+.schedule-form textarea {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #d4e1e7;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.schedule-form input:focus,
+.schedule-form select:focus,
+.schedule-form textarea:focus {
+    border-color: #0b8fa3;
+}
+
+.schedule-form input[readonly] {
+    background: #f4f8fa;
+    color: #37474f;
+    font-weight: 600;
+}
+
+/* Dark mode overrides for modal and count */
+body.dark .doctor-count {
+    color: #4bd3e6;
+}
+
+body.dark .no-doctors-message,
+body.dark .doctor-modal {
+    background: #112832;
+    color: #e2ebf0;
+    border-color: #234552;
+}
+
+body.dark .no-doctors-message h3,
+body.dark .modal-profile-title h2,
+body.dark .schedule-modal-header h2,
+body.dark .modal-about-section h4 {
+    color: #ffffff;
+}
+
+body.dark .modal-info-grid {
+    background: #0b1e26;
+    border-color: #1a3945;
+}
+
+body.dark .modal-info-grid div p {
+    color: #d7e4e9;
+}
+
+body.dark .doctor-modal-close {
+    background: #1a3945;
+    color: #e2ebf0;
+}
+
+body.dark .schedule-form label {
+    color: #d7e4e9;
+}
+
+body.dark .schedule-form input,
+body.dark .schedule-form select,
+body.dark .schedule-form textarea {
+    background: #0b1e26;
+    border-color: #234552;
+    color: #ffffff;
+}
+
+body.dark .schedule-form input[readonly] {
+    background: #152d37;
+    color: #4bd3e6;
+}

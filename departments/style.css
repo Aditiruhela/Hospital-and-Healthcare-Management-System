@@ -180,3 +180,110 @@
     }
 
 }
+
+
+/* ===================================================
+   DEPARTMENT CONTROLS, SEARCH, COUNTER & NO RESULTS
+=================================================== */
+
+.department-controls {
+    max-width: 1200px;
+    margin: 35px auto 10px;
+    padding: 22px 25px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e4ebf1;
+    box-sizing: border-box;
+}
+
+.department-controls .search-box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #123b4a;
+}
+
+.department-controls .search-box input {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1px solid #d4e1e7;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.department-controls .search-box input:focus {
+    border-color: #1677b8;
+}
+
+.department-count {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1677b8;
+}
+
+.no-departments-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: white;
+    padding: 45px 25px;
+    border-radius: 15px;
+    border: 1px solid #e4ebf1;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.no-departments-message .no-results-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.no-departments-message h3 {
+    font-size: 24px;
+    color: #123b4a;
+    margin: 8px 0;
+}
+
+.no-departments-message p {
+    color: #68747d;
+    margin-bottom: 22px;
+    font-size: 15px;
+}
+
+.no-departments-message .department-btn {
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+
+/* Dark mode overrides for department controls */
+body.dark .department-controls,
+body.dark .no-departments-message {
+    background: #112832;
+    border-color: #234552;
+    color: #e2ebf0;
+}
+
+body.dark .department-controls .search-box label,
+body.dark .no-departments-message h3 {
+    color: #ffffff;
+}
+
+body.dark .department-controls .search-box input {
+    background: #0b1e26;
+    border-color: #234552;
+    color: #ffffff;
+}
+
+body.dark .department-count {
+    color: #35c7ff;
+}
+
+@media (max-width: 650px) {
+    .department-controls {
+        margin: 25px 6% 10px;
+    }
+}
