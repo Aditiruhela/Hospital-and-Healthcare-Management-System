@@ -28,6 +28,7 @@
                 <li><a href="../Pharmacy/Pharmacy.html">Pharmacy</a></li>
                 <li><a href="../billing/billing.html">Billing</a></li>
                 <li><a href="../contact/contact.html">Contact</a></li>
+                <li><a href="../staff/staff-login.html">Staff Login</a></li>
             </ul>
             <button type="button" id="themeToggle" class="theme-btn site-theme-toggle">🌙 Dark</button>
             <button type="button" class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
@@ -46,7 +47,7 @@
         <section>
             <h2>Schedule Appointment</h2>
 
-            <form>
+            <form id="appointment-form">
 
                 <label for="patient-name">Patient Name</label>
                 <input type="text" id="patient-name" name="patient-name" required>
@@ -76,43 +77,6 @@
             </form>
         </section>
 
-        <section>
-            <h2>Appointment Records</h2>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Patient Name</th>
-                        <th>Doctor Name</th>
-                        <th>Type</th>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Rahul Sharma</td>
-                        <td>Dr. Amit Verma</td>
-                        <td>Consultation</td>
-                        <td>20 Sep 2026</td>
-                        <td>10:00 AM</td>
-                        <td>Confirmed</td>
-                    </tr>
-
-                    <tr>
-                        <td>Priya Singh</td>
-                        <td>Dr. Neha Kapoor</td>
-                        <td>Follow-up</td>
-                        <td>21 Sep 2026</td>
-                        <td>11:30 AM</td>
-                        <td>Pending</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
     </main>
 
     <footer>
@@ -120,6 +84,7 @@
     </footer>
 
     <script src="../js/theme.js"></script>
+    <script src="appointments.js"></script>
 </body>
 
 </html>

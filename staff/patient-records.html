@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Records | MediCare</title>
+    <link rel="stylesheet" href="patient-records.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>MediCare</h1>
+            <p>Hospital Staff Dashboard</p>
+        </div>
+
+        <button id="logout-button">Logout</button>
+    </header>
+
+    <main>
+        <section class="dashboard-heading">
+            <h2>Patient Records</h2>
+            <p>View and manage registered patient information.</p>
+        </section>
+
+        <section class="records-section">
+            <div class="records-top">
+                <h2>Registered Patients</h2>
+                <input
+                    type="text"
+                    id="search-patient"
+                    placeholder="Search by patient name or ID"
+                >
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Patient ID</th>
+                            <th>Patient Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Blood Group</th>
+                            <th>Contact</th>
+                            <th>Email</th>
+                            <th>Last Visit</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="patient-table-body"></tbody>
+                </table>
+            </div>
+
+            <p id="no-records"></p>
+        </section>
+
+
+    <!-- APPOINTMENT RECORDS -->
+        <section class="records-section">
+            <div class="records-top">
+                <h2>Appointment Records</h2>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Patient Name</th>
+                            <th>Doctor Name</th>
+                            <th>Appointment Type</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="appointment-table-body"></tbody>
+                </table>
+            </div>
+
+            <p id="no-appointments"></p>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MediCare Hospital. All Rights Reserved.</p>
+    </footer>
+
+    <script src="patient-records.js"></script>
+
+</body>
+</html>

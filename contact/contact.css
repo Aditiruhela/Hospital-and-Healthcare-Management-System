@@ -497,3 +497,20 @@ body {
     font-weight: 600;
     font-size: 14px;
 }
+
+@media (min-width: 1001px) {
+    .navbar {
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: nowrap;
+        gap: 2px;
+    }
+
+    .nav-links a {
+        padding: 8px 6px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+}
