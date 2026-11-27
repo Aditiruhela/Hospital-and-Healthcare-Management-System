@@ -1,52 +1,56 @@
 
 const appointmentForm = document.querySelector("form");
-const appointmentTableBody = document.querySelector("tbody");
 
-console.log("Appointments JavaScript is connected!");
+const defaultAppointments = [
+    {
+        patientName: "Rahul Sharma",
+        doctorName: "Dr. Amit Verma",
+        appointmentType: "Consultation",
+        appointmentDate: "2026-09-20",
+        appointmentTime: "10:00",
+        reason: "General consultation",
+        status: "Confirmed"
+    },
+    {
+        patientName: "Priya Singh",
+        doctorName: "Dr. Neha Kapoor",
+        appointmentType: "Follow-up",
+        appointmentDate: "2026-09-21",
+        appointmentTime: "11:30",
+        reason: "Follow-up visit",
+        status: "Pending"
+    }
+];
+
+let appointments = JSON.parse(
+    localStorage.getItem("appointments")
+) || [];
+
+if (localStorage.getItem("appointments") === null) {
+    appointments = defaultAppointments;
+    localStorage.setItem("appointments", JSON.stringify(appointments));
+}
 
 appointmentForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const patientName = document.getElementById("appointment-patient").value;
-    const doctorName = document.getElementById("doctor").value;
-    const appointmentType = document.getElementById("appointment-type").value;
-    const appointmentDate = document.getElementById("appointment-date").value;
-    const appointmentTime = document.getElementById("appointment-time").value;
-    const reason = document.getElementById("reason").value;
+    const appointment = {
+        patientName: document.getElementById("patient-name").value,
+        doctorName: document.getElementById("doctor-name").value,
+        appointmentType: document.getElementById("appointment-type").value,
+        appointmentDate: document.getElementById("appointment-date").value,
+        appointmentTime: document.getElementById("appointment-time").value,
+        reason: document.getElementById("reason").value,
+        status: "Scheduled"
+    };
 
-    const newRow = document.createElement("tr");
+    appointments.push(appointment);
 
-    newRow.innerHTML = `
-        <td>${patientName}</td>
-        <td>${doctorName}</td>
-        <td>${appointmentType}</td>
-        <td>${appointmentDate}</td>
-        <td>${appointmentTime}</td>
-        <td>Scheduled</td>
-        <td>
-            <button type="button" class="cancel-btn">
-                Cancel
-            </button>
-        </td>
-    `;
+    localStorage.setItem("appointments", JSON.stringify(appointments));
 
-    appointmentTableBody.appendChild(newRow);
+    alert("Appointment scheduled successfully!");
 
     appointmentForm.reset();
 
     console.log("Appointment scheduled successfully!");
-    console.log("Reason for Visit:", reason);
-});
-
-// Cancel appointment using event delegation
-appointmentTableBody.addEventListener("click", function (event) {
-    if (event.target.classList.contains("cancel-btn")) {
-        const row = event.target.closest("tr");
-
-        row.cells[5].textContent = "Cancelled";
-
-        event.target.remove();
-        
-        console.log("Appointment cancelled!");
-    }
 });
