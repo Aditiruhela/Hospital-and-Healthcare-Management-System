@@ -58,7 +58,8 @@ function normalizeNavbar() {
     ["Services", "../services/services.html", "services"],
     ["Pharmacy", "../Pharmacy/Pharmacy.html", "pharmacy"],
     ["Billing", "../billing/billing.html", "billing"],
-    ["Contact", "../contact/contact.html", "contact"]
+    ["Contact", "../contact/contact.html", "contact"],
+    ["Staff Login", "../staff/staff-login.html", "staff"]
   ];
 
   const currentPage = window.location.pathname.toLowerCase();
